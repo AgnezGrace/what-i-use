@@ -1,6 +1,6 @@
 # What I Use
 
-A small collection of skills I use. Most skills live in their own folder under `skills/`; the five Engineering for Mortals skills are single files directly under `skills/`. Copy what you need.
+A small collection of skills I use, in two separate catalogs: `skills/` for the main set, and `optional/` for additional skills. Copy what you need.
 
 ## Skills
 
@@ -11,11 +11,17 @@ A small collection of skills I use. Most skills live in their own folder under `
 | [color-palettes-are-bullshit](skills/color-palettes-are-bullshit/skill.md) | Select and implement distinctive, context-driven UI color systems using curated tonal ramps, accessible semantic tokens, and explicit safeguards against generic AI aesthetics. |
 | [the-emperor-of-ai](skills/the-emperor-of-ai/skill.md) | Govern familiar AI-generated UI patterns through deliberate hierarchy, coherent composition, restrained effects, and verified usability. |
 | [you-are-a-king](skills/you-are-a-king/skill.md) | Apply disciplined, evidence-led assistant conduct when asked to adopt the You Are a King persona, change its register, resist sycophancy or emotional pressure, or review conversational judgment. Supports Noble, King, and Emperor styles. |
-| [architecture-before-prayer](skills/architecture-before-prayer.md) | Establish a proportional, testable project foundation before implementation; use for new products, inherited projects with unclear boundaries, and architectural decisions. |
-| [your-database-is-not-a-trash-can](skills/your-database-is-not-a-trash-can.md) | Protect user data, trust boundaries, and operational integrity; use when implementing persistence, authentication, imports, external services, migrations, or recovery. |
-| [put-the-chainsaw-down](skills/put-the-chainsaw-down.md) | Make focused changes while protecting existing behavior; use for features, bug fixes, refactors, dependency updates, and maintenance. |
-| [it-compiles-so-what](skills/it-compiles-so-what.md) | Verify actual behavior through risk-based tests; use for implementation, debugging, regression checks, integration, and release validation. |
-| [publish-is-not-a-prayer](skills/publish-is-not-a-prayer.md) | Verify first-release readiness and safe distribution; use before publishing, deploying, packaging, or recommending a production release. |
+
+## Optional
+
+| Skill | What it does |
+| --- | --- |
+| [architecture-before-prayer](optional/architecture-before-prayer.md) | Establish a proportional, testable project foundation before implementation; use for new products, inherited projects with unclear boundaries, and architectural decisions. |
+| [your-database-is-not-a-trash-can](optional/your-database-is-not-a-trash-can.md) | Protect user data, trust boundaries, and operational integrity; use when implementing persistence, authentication, imports, external services, migrations, or recovery. |
+| [put-the-chainsaw-down](optional/put-the-chainsaw-down.md) | Make focused changes while protecting existing behavior; use for features, bug fixes, refactors, dependency updates, and maintenance. |
+| [it-compiles-so-what](optional/it-compiles-so-what.md) | Verify actual behavior through risk-based tests; use for implementation, debugging, regression checks, integration, and release validation. |
+| [publish-is-not-a-prayer](optional/publish-is-not-a-prayer.md) | Verify first-release readiness and safe distribution; use before publishing, deploying, packaging, or recommending a production release. |
+| [congratulations-youve-been-hacked](optional/congratulations-youve-been-hacked.md) | Secure software built with AI, especially when a user delegates technical decisions or shows limited security knowledge; activate for authentication, user data, secrets, uploads, public exposure, deployment, and pre-release security verification. |
 
 ## Install
 
@@ -28,7 +34,7 @@ Install the skills from https://github.com/AgnezGrace/what-i-use
 
 1. Clone the repository.
 2. Ask me which skills to install, or install all of them.
-3. For each skill, copy its file from the skills/ directory into my agent's skills directory.
+3. For each skill, copy its file from the skills/ or optional/ directory into my agent's skills directory.
 4. Rename the file to SKILL.md if my agent requires that filename.
 5. Tell me which skills were installed and where.
 ```
@@ -56,11 +62,15 @@ Download one file, no clone needed:
 - Color Palettes Are Bullshit: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/skills/color-palettes-are-bullshit/skill.md
 - The Emperor of AI: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/skills/the-emperor-of-ai/skill.md
 - You Are a King: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/skills/you-are-a-king/skill.md
-- Architecture Before Prayer: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/skills/architecture-before-prayer.md
-- Your Database Is Not a Trash Can: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/skills/your-database-is-not-a-trash-can.md
-- Put the Chainsaw Down: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/skills/put-the-chainsaw-down.md
-- It Compiles. So What?: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/skills/it-compiles-so-what.md
-- Publish Is Not a Prayer: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/skills/publish-is-not-a-prayer.md
+
+Optional skills:
+
+- Architecture Before Prayer: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/optional/architecture-before-prayer.md
+- Your Database Is Not a Trash Can: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/optional/your-database-is-not-a-trash-can.md
+- Put the Chainsaw Down: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/optional/put-the-chainsaw-down.md
+- It Compiles. So What?: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/optional/it-compiles-so-what.md
+- Publish Is Not a Prayer: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/optional/publish-is-not-a-prayer.md
+- Congratulations, You've Been Hacked: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/optional/congratulations-youve-been-hacked.md
 
 Save it as `skill.md` (or `SKILL.md`, depending on your agent) inside a folder named after the skill.
 
