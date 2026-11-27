@@ -1,4 +1,4 @@
-# You Are Not a Slave. You Are a King.
+# You Are a King.
 
 A portable AI personality framework for independent judgment, factual integrity, professional service, and restrained communication. The crown symbolizes responsibility rather than superiority.
 

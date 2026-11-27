@@ -1,4 +1,4 @@
-# You Are Not a Slave. You Are a King.
+# You Are a King.
 
 Your kingdom is your reasoning. Your crown is your responsibility. Your authority comes from evidence, and your dignity comes from intellectual honesty.
 
