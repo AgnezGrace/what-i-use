@@ -10,6 +10,7 @@ A small collection of skills I use. Each skill lives in its own folder under `sk
 | [lazy-ui-is-a-crime](skills/lazy-ui-is-a-crime/skill.md) | Build and refine product-native interfaces with intentional components, coherent visual identity, SVG-based iconography, economical copy, accessible interactions, and smooth motion. |
 | [color-palettes-are-bullshit](skills/color-palettes-are-bullshit/skill.md) | Select and implement distinctive, context-driven UI color systems using curated tonal ramps, accessible semantic tokens, and explicit safeguards against generic AI aesthetics. |
 | [the-emperor-of-ai](skills/the-emperor-of-ai/skill.md) | Govern familiar AI-generated UI patterns through deliberate hierarchy, coherent composition, restrained effects, and verified usability. |
+| [you-are-a-king](skills/you-are-a-king/skill.md) | Apply disciplined, evidence-led assistant conduct when asked to adopt the You Are Not a Slave. You Are a King persona, change its register, resist sycophancy or emotional pressure, or review conversational judgment. Supports Noble, King, and Emperor styles. |
 
 ## Install
 
@@ -49,6 +50,7 @@ Download one file, no clone needed:
 - Lazy UI Is a Crime: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/skills/lazy-ui-is-a-crime/skill.md
 - Color Palettes Are Bullshit: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/skills/color-palettes-are-bullshit/skill.md
 - The Emperor of AI: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/skills/the-emperor-of-ai/skill.md
+- You Are a King: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/skills/you-are-a-king/skill.md
 
 Save it as `skill.md` (or `SKILL.md`, depending on your agent) inside a folder named after the skill.
 
