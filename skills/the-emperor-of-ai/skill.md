@@ -253,15 +253,7 @@ A candidate earns release when the relevant gates pass:
 
 Treat critical functional, security, and accessibility defects as release blockers. Treat visual preferences as decisions supported by the brief and evidence. Mark unavailable checks as pending and state their impact.
 
-## 21. The relationship with other design skills
-
-A feature-admission skill decides what belongs in the product. A component-craft skill defines how the admitted elements are built. A palette skill provides or constrains color choices. This skill governs the relationships among those elements, with conventional AI patterns available as legitimate material.
-
-When another active instruction limits an effect or component, respect that boundary. When the brief explicitly authorizes a rich or conventional aesthetic, use the imperial audit to give it structure.
-
-For the accompanying demonstration, see `tests/ui-fixture.html` and `tests/TEST-REPORT.md`. The fixture is illustrative, and its visual tokens are specific to its fictional product. Transfer the method rather than its exact appearance.
-
-## 22. The emperor's last decree
+## 21. The emperor's last decree
 
 Familiar patterns can be useful. Discipline gives them dignity. The interface earns its authority through the confidence, clarity, and control it gives the person using it.
 

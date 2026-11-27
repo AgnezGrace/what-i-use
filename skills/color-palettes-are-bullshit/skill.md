@@ -60,8 +60,6 @@ The following role tables include suggested values for both themes. `BG` is the 
 
 Apply tokens to components rather than scattering literal colors. Keep neutral and accent roles separate even if they happen to share a hue. For a monochrome family, use spacing, weight, outline and position to express hierarchy. A focus ring should have a visible offset on filled controls. Use native system high-contrast support and preserve keyboard focus.
 
-The optional `palettes.json` and `palettes.css` mirror these values for implementation. Set `data-palette` and `data-theme` on the same root element when using the supplied CSS.
-
 ## 6. Catalog
 
 ### 01. I'm Rich
