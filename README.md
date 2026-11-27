@@ -7,6 +7,7 @@ A small collection of skills I use. Each skill lives in its own folder under `sk
 | Skill | What it does |
 | --- | --- |
 | [simplicity](skills/simplicity/skill.md) | Design, audit, implement, and refine interfaces around genuine user needs, coherent interaction paths, useful language, and durable simplicity. |
+| [lazy-ui-is-a-crime](skills/lazy-ui-is-a-crime/skill.md) | Build and refine product-native interfaces with intentional components, coherent visual identity, SVG-based iconography, economical copy, accessible interactions, and smooth motion. |
 
 ## Install
 
@@ -43,6 +44,7 @@ Adjust the destination path to match your agent. Rename the file to `SKILL.md` i
 Download one file, no clone needed:
 
 - Simplicity: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/skills/simplicity/skill.md
+- Lazy UI Is a Crime: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/skills/lazy-ui-is-a-crime/skill.md
 
 Save it as `skill.md` (or `SKILL.md`, depending on your agent) inside a folder named after the skill.
 
