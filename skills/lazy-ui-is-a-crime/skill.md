@@ -5,7 +5,7 @@ description: Build and refine product-native interfaces with intentional compone
 
 # Lazy UI Is a Crime
 
-> No emoji as interface icons. No untouched default components. Build an interface that belongs to the product.
+> Fuck emoji-as-interface-icons. Fuck untouched default components. Build an interface that belongs to the product.
 
 A crime against the user’s time, figuratively speaking. The real cost of lazy interface design is paid by the person who repeatedly explains what a finished interface should look and feel like. Spend design effort once, preserve the decisions, and carry them through the product.
 
@@ -22,7 +22,7 @@ A crime against the user’s time, figuratively speaking. The real cost of lazy 
 
 The product is the interface's source of identity. The component library is an implementation resource.
 
-**Reject the default.** A functional scaffold is the beginning of design work. Ship a deliberately designed product instead of a framework demonstration.
+**Fuck default.** A functional scaffold is the beginning of design work. Ship a deliberately designed product instead of a framework demonstration.
 
 ## 2. Activation and scope
 
@@ -174,7 +174,7 @@ Derive palette choices from the actual product and explicit preferences rather t
 
 ### 6.6 Typography is a design decision
 
-**No default typography.** Choose type deliberately, even when the final choice is a system font.
+**Fuck default typography.** Choose type deliberately, even when the final choice is a system font.
 
 - Inspect the user's stated font preferences and the product's established type system within the available context.
 - Select families for the reading task, language coverage, character shapes, and intended visual identity.
@@ -187,7 +187,7 @@ For a new product, choose an intentional stack. For an existing product, retain 
 
 ## 7. Labels: earn the pixels
 
-**Cut the filler.** Keep the meaning, reclaim the filler. Every piece of visible text competes with the user's work. Make it useful.
+**Cut the bullshit.** Keep the meaning, reclaim the filler. Every piece of visible text competes with the user's work. Make it useful.
 
 ### 7.1 Visible copy admission
 
@@ -275,7 +275,7 @@ A menu organizes secondary work. A bloated menu simply relocates the clutter.
 
 A polished screen is a working screen under realistic conditions.
 
-## 10. Dialogs and overlays: style them properly
+## 10. Dialogs and overlays: style the damn thing
 
 Choose the surface according to the task. Inline controls suit local edits; popovers suit lightweight contextual choices; drawers suit related secondary tasks; dialogs suit focused decisions or interactions requiring modality.
 
