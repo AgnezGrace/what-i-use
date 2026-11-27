@@ -8,6 +8,7 @@ A small collection of skills I use. Each skill lives in its own folder under `sk
 | --- | --- |
 | [simplicity](skills/simplicity/skill.md) | Design, audit, implement, and refine interfaces around genuine user needs, coherent interaction paths, useful language, and durable simplicity. |
 | [lazy-ui-is-a-crime](skills/lazy-ui-is-a-crime/skill.md) | Build and refine product-native interfaces with intentional components, coherent visual identity, SVG-based iconography, economical copy, accessible interactions, and smooth motion. |
+| [color-palettes-are-bullshit](skills/color-palettes-are-bullshit/skill.md) | Select and implement distinctive, context-driven UI color systems using curated tonal ramps, accessible semantic tokens, and explicit safeguards against generic AI aesthetics. |
 
 ## Install
 
@@ -45,6 +46,7 @@ Download one file, no clone needed:
 
 - Simplicity: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/skills/simplicity/skill.md
 - Lazy UI Is a Crime: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/skills/lazy-ui-is-a-crime/skill.md
+- Color Palettes Are Bullshit: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/skills/color-palettes-are-bullshit/skill.md
 
 Save it as `skill.md` (or `SKILL.md`, depending on your agent) inside a folder named after the skill.
 
