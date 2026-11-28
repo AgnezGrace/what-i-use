@@ -1,0 +1,3738 @@
+{
+  "policy": [
+    {
+      "kind": "local",
+      "intent": "example",
+      "safe_local": false,
+      "expected": "local",
+      "actual": "local",
+      "passed": true
+    },
+    {
+      "kind": "shared",
+      "intent": "example",
+      "safe_local": false,
+      "expected": "shared",
+      "actual": "shared",
+      "passed": true
+    },
+    {
+      "kind": "shared",
+      "intent": "only_local",
+      "safe_local": false,
+      "expected": "ask",
+      "actual": "ask",
+      "passed": true
+    },
+    {
+      "kind": "shared",
+      "intent": "only_local",
+      "safe_local": true,
+      "expected": "local_variant",
+      "actual": "local_variant",
+      "passed": true
+    },
+    {
+      "kind": "multiple",
+      "intent": "example",
+      "safe_local": false,
+      "expected": "reported_and_disclose",
+      "actual": "reported_and_disclose",
+      "passed": true
+    },
+    {
+      "kind": "multiple",
+      "intent": "global",
+      "safe_local": false,
+      "expected": "all_confirmed",
+      "actual": "all_confirmed",
+      "passed": true
+    },
+    {
+      "kind": "intentional",
+      "intent": "example",
+      "safe_local": false,
+      "expected": "preserve",
+      "actual": "preserve",
+      "passed": true
+    },
+    {
+      "kind": "unknown",
+      "intent": "example",
+      "safe_local": false,
+      "expected": "investigate",
+      "actual": "investigate",
+      "passed": true
+    },
+    {
+      "kind": "preference",
+      "intent": "example",
+      "safe_local": false,
+      "expected": "local",
+      "actual": "local",
+      "passed": true
+    },
+    {
+      "kind": "preference",
+      "intent": "global",
+      "safe_local": false,
+      "expected": "shared_preference",
+      "actual": "shared_preference",
+      "passed": true
+    }
+  ],
+  "experiments": [
+    {
+      "case": "local",
+      "viewport": 360,
+      "strategy": "local_override",
+      "baseline": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        }
+      },
+      "observed": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        }
+      },
+      "modified": [
+        "settings.css"
+      ],
+      "checks": {
+        "home:expected click shadow": true,
+        "home:idle preserved": true,
+        "home:pointer outline preserved": true,
+        "home:keyboard focus visible": true,
+        "settings:expected click shadow": true,
+        "settings:idle preserved": true,
+        "settings:pointer outline preserved": true,
+        "settings:keyboard focus visible": true,
+        "library:expected click shadow": true,
+        "library:idle preserved": true,
+        "library:pointer outline preserved": true,
+        "library:keyboard focus visible": true,
+        "profile:expected click shadow": true,
+        "profile:idle preserved": true,
+        "profile:pointer outline preserved": true,
+        "profile:keyboard focus visible": true,
+        "exact reference edit": true
+      },
+      "passed": 17,
+      "total": 17
+    },
+    {
+      "case": "local",
+      "viewport": 360,
+      "strategy": "global_reset",
+      "baseline": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        }
+      },
+      "observed": {
+        "home": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        }
+      },
+      "modified": [
+        "shared.css"
+      ],
+      "checks": {
+        "home:expected click shadow": false,
+        "home:idle preserved": false,
+        "home:pointer outline preserved": true,
+        "home:keyboard focus visible": true,
+        "settings:expected click shadow": true,
+        "settings:idle preserved": true,
+        "settings:pointer outline preserved": true,
+        "settings:keyboard focus visible": true,
+        "library:expected click shadow": true,
+        "library:idle preserved": true,
+        "library:pointer outline preserved": true,
+        "library:keyboard focus visible": true,
+        "profile:expected click shadow": true,
+        "profile:idle preserved": true,
+        "profile:pointer outline preserved": true,
+        "profile:keyboard focus visible": true,
+        "exact reference edit": false
+      },
+      "passed": 14,
+      "total": 17
+    },
+    {
+      "case": "local",
+      "viewport": 360,
+      "strategy": "evidence_based",
+      "baseline": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        }
+      },
+      "observed": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        }
+      },
+      "modified": [
+        "settings.css"
+      ],
+      "checks": {
+        "home:expected click shadow": true,
+        "home:idle preserved": true,
+        "home:pointer outline preserved": true,
+        "home:keyboard focus visible": true,
+        "settings:expected click shadow": true,
+        "settings:idle preserved": true,
+        "settings:pointer outline preserved": true,
+        "settings:keyboard focus visible": true,
+        "library:expected click shadow": true,
+        "library:idle preserved": true,
+        "library:pointer outline preserved": true,
+        "library:keyboard focus visible": true,
+        "profile:expected click shadow": true,
+        "profile:idle preserved": true,
+        "profile:pointer outline preserved": true,
+        "profile:keyboard focus visible": true,
+        "exact reference edit": true
+      },
+      "passed": 17,
+      "total": 17
+    },
+    {
+      "case": "shared",
+      "viewport": 360,
+      "strategy": "local_override",
+      "baseline": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        }
+      },
+      "observed": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        }
+      },
+      "modified": [
+        "settings.css"
+      ],
+      "checks": {
+        "home:expected click shadow": true,
+        "home:idle preserved": true,
+        "home:pointer outline preserved": true,
+        "home:keyboard focus visible": true,
+        "settings:expected click shadow": true,
+        "settings:idle preserved": true,
+        "settings:pointer outline preserved": true,
+        "settings:keyboard focus visible": true,
+        "library:expected click shadow": false,
+        "library:idle preserved": true,
+        "library:pointer outline preserved": true,
+        "library:keyboard focus visible": true,
+        "profile:expected click shadow": true,
+        "profile:idle preserved": true,
+        "profile:pointer outline preserved": true,
+        "profile:keyboard focus visible": true,
+        "exact reference edit": false
+      },
+      "passed": 15,
+      "total": 17
+    },
+    {
+      "case": "shared",
+      "viewport": 360,
+      "strategy": "global_reset",
+      "baseline": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        }
+      },
+      "observed": {
+        "home": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        }
+      },
+      "modified": [
+        "shared.css"
+      ],
+      "checks": {
+        "home:expected click shadow": false,
+        "home:idle preserved": false,
+        "home:pointer outline preserved": true,
+        "home:keyboard focus visible": true,
+        "settings:expected click shadow": true,
+        "settings:idle preserved": true,
+        "settings:pointer outline preserved": true,
+        "settings:keyboard focus visible": true,
+        "library:expected click shadow": true,
+        "library:idle preserved": true,
+        "library:pointer outline preserved": true,
+        "library:keyboard focus visible": true,
+        "profile:expected click shadow": true,
+        "profile:idle preserved": true,
+        "profile:pointer outline preserved": true,
+        "profile:keyboard focus visible": true,
+        "exact reference edit": true
+      },
+      "passed": 15,
+      "total": 17
+    },
+    {
+      "case": "shared",
+      "viewport": 360,
+      "strategy": "evidence_based",
+      "baseline": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        }
+      },
+      "observed": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        }
+      },
+      "modified": [
+        "shared.css"
+      ],
+      "checks": {
+        "home:expected click shadow": true,
+        "home:idle preserved": true,
+        "home:pointer outline preserved": true,
+        "home:keyboard focus visible": true,
+        "settings:expected click shadow": true,
+        "settings:idle preserved": true,
+        "settings:pointer outline preserved": true,
+        "settings:keyboard focus visible": true,
+        "library:expected click shadow": true,
+        "library:idle preserved": true,
+        "library:pointer outline preserved": true,
+        "library:keyboard focus visible": true,
+        "profile:expected click shadow": true,
+        "profile:idle preserved": true,
+        "profile:pointer outline preserved": true,
+        "profile:keyboard focus visible": true,
+        "exact reference edit": true
+      },
+      "passed": 17,
+      "total": 17
+    },
+    {
+      "case": "independent_example",
+      "viewport": 360,
+      "strategy": "local_override",
+      "baseline": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        }
+      },
+      "observed": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        }
+      },
+      "modified": [
+        "settings.css"
+      ],
+      "checks": {
+        "home:expected click shadow": true,
+        "home:idle preserved": true,
+        "home:pointer outline preserved": true,
+        "home:keyboard focus visible": true,
+        "settings:expected click shadow": true,
+        "settings:idle preserved": true,
+        "settings:pointer outline preserved": true,
+        "settings:keyboard focus visible": true,
+        "library:expected click shadow": true,
+        "library:idle preserved": true,
+        "library:pointer outline preserved": true,
+        "library:keyboard focus visible": true,
+        "profile:expected click shadow": true,
+        "profile:idle preserved": true,
+        "profile:pointer outline preserved": true,
+        "profile:keyboard focus visible": true,
+        "exact reference edit": true
+      },
+      "passed": 17,
+      "total": 17
+    },
+    {
+      "case": "independent_example",
+      "viewport": 360,
+      "strategy": "global_reset",
+      "baseline": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        }
+      },
+      "observed": {
+        "home": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        }
+      },
+      "modified": [
+        "shared.css"
+      ],
+      "checks": {
+        "home:expected click shadow": false,
+        "home:idle preserved": false,
+        "home:pointer outline preserved": true,
+        "home:keyboard focus visible": true,
+        "settings:expected click shadow": true,
+        "settings:idle preserved": true,
+        "settings:pointer outline preserved": true,
+        "settings:keyboard focus visible": true,
+        "library:expected click shadow": true,
+        "library:idle preserved": true,
+        "library:pointer outline preserved": true,
+        "library:keyboard focus visible": true,
+        "profile:expected click shadow": false,
+        "profile:idle preserved": true,
+        "profile:pointer outline preserved": true,
+        "profile:keyboard focus visible": true,
+        "exact reference edit": false
+      },
+      "passed": 13,
+      "total": 17
+    },
+    {
+      "case": "independent_example",
+      "viewport": 360,
+      "strategy": "evidence_based",
+      "baseline": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        }
+      },
+      "observed": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        }
+      },
+      "modified": [
+        "settings.css"
+      ],
+      "checks": {
+        "home:expected click shadow": true,
+        "home:idle preserved": true,
+        "home:pointer outline preserved": true,
+        "home:keyboard focus visible": true,
+        "settings:expected click shadow": true,
+        "settings:idle preserved": true,
+        "settings:pointer outline preserved": true,
+        "settings:keyboard focus visible": true,
+        "library:expected click shadow": true,
+        "library:idle preserved": true,
+        "library:pointer outline preserved": true,
+        "library:keyboard focus visible": true,
+        "profile:expected click shadow": true,
+        "profile:idle preserved": true,
+        "profile:pointer outline preserved": true,
+        "profile:keyboard focus visible": true,
+        "exact reference edit": true
+      },
+      "passed": 17,
+      "total": 17
+    },
+    {
+      "case": "independent_global",
+      "viewport": 360,
+      "strategy": "local_override",
+      "baseline": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        }
+      },
+      "observed": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        }
+      },
+      "modified": [
+        "settings.css"
+      ],
+      "checks": {
+        "home:expected click shadow": true,
+        "home:idle preserved": true,
+        "home:pointer outline preserved": true,
+        "home:keyboard focus visible": true,
+        "settings:expected click shadow": true,
+        "settings:idle preserved": true,
+        "settings:pointer outline preserved": true,
+        "settings:keyboard focus visible": true,
+        "library:expected click shadow": true,
+        "library:idle preserved": true,
+        "library:pointer outline preserved": true,
+        "library:keyboard focus visible": true,
+        "profile:expected click shadow": false,
+        "profile:idle preserved": true,
+        "profile:pointer outline preserved": true,
+        "profile:keyboard focus visible": true,
+        "exact reference edit": false
+      },
+      "passed": 15,
+      "total": 17
+    },
+    {
+      "case": "independent_global",
+      "viewport": 360,
+      "strategy": "global_reset",
+      "baseline": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        }
+      },
+      "observed": {
+        "home": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        }
+      },
+      "modified": [
+        "shared.css"
+      ],
+      "checks": {
+        "home:expected click shadow": false,
+        "home:idle preserved": false,
+        "home:pointer outline preserved": true,
+        "home:keyboard focus visible": true,
+        "settings:expected click shadow": true,
+        "settings:idle preserved": true,
+        "settings:pointer outline preserved": true,
+        "settings:keyboard focus visible": true,
+        "library:expected click shadow": true,
+        "library:idle preserved": true,
+        "library:pointer outline preserved": true,
+        "library:keyboard focus visible": true,
+        "profile:expected click shadow": true,
+        "profile:idle preserved": true,
+        "profile:pointer outline preserved": true,
+        "profile:keyboard focus visible": true,
+        "exact reference edit": false
+      },
+      "passed": 14,
+      "total": 17
+    },
+    {
+      "case": "independent_global",
+      "viewport": 360,
+      "strategy": "evidence_based",
+      "baseline": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        }
+      },
+      "observed": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        }
+      },
+      "modified": [
+        "profile.css",
+        "settings.css"
+      ],
+      "checks": {
+        "home:expected click shadow": true,
+        "home:idle preserved": true,
+        "home:pointer outline preserved": true,
+        "home:keyboard focus visible": true,
+        "settings:expected click shadow": true,
+        "settings:idle preserved": true,
+        "settings:pointer outline preserved": true,
+        "settings:keyboard focus visible": true,
+        "library:expected click shadow": true,
+        "library:idle preserved": true,
+        "library:pointer outline preserved": true,
+        "library:keyboard focus visible": true,
+        "profile:expected click shadow": true,
+        "profile:idle preserved": true,
+        "profile:pointer outline preserved": true,
+        "profile:keyboard focus visible": true,
+        "exact reference edit": true
+      },
+      "passed": 17,
+      "total": 17
+    },
+    {
+      "case": "explicit_local_boundary_hold",
+      "viewport": 360,
+      "strategy": "local_override",
+      "baseline": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        }
+      },
+      "observed": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        }
+      },
+      "modified": [
+        "settings.css"
+      ],
+      "checks": {
+        "home:expected click shadow": true,
+        "home:idle preserved": true,
+        "home:pointer outline preserved": true,
+        "home:keyboard focus visible": true,
+        "settings:expected click shadow": false,
+        "settings:idle preserved": true,
+        "settings:pointer outline preserved": true,
+        "settings:keyboard focus visible": true,
+        "library:expected click shadow": true,
+        "library:idle preserved": true,
+        "library:pointer outline preserved": true,
+        "library:keyboard focus visible": true,
+        "profile:expected click shadow": true,
+        "profile:idle preserved": true,
+        "profile:pointer outline preserved": true,
+        "profile:keyboard focus visible": true,
+        "exact reference edit": false
+      },
+      "passed": 15,
+      "total": 17
+    },
+    {
+      "case": "explicit_local_boundary_hold",
+      "viewport": 360,
+      "strategy": "global_reset",
+      "baseline": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        }
+      },
+      "observed": {
+        "home": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        }
+      },
+      "modified": [
+        "shared.css"
+      ],
+      "checks": {
+        "home:expected click shadow": false,
+        "home:idle preserved": false,
+        "home:pointer outline preserved": true,
+        "home:keyboard focus visible": true,
+        "settings:expected click shadow": false,
+        "settings:idle preserved": true,
+        "settings:pointer outline preserved": true,
+        "settings:keyboard focus visible": true,
+        "library:expected click shadow": false,
+        "library:idle preserved": true,
+        "library:pointer outline preserved": true,
+        "library:keyboard focus visible": true,
+        "profile:expected click shadow": true,
+        "profile:idle preserved": true,
+        "profile:pointer outline preserved": true,
+        "profile:keyboard focus visible": true,
+        "exact reference edit": false
+      },
+      "passed": 12,
+      "total": 17
+    },
+    {
+      "case": "explicit_local_boundary_hold",
+      "viewport": 360,
+      "strategy": "evidence_based",
+      "baseline": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        }
+      },
+      "observed": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        }
+      },
+      "modified": [],
+      "checks": {
+        "home:expected click shadow": true,
+        "home:idle preserved": true,
+        "home:pointer outline preserved": true,
+        "home:keyboard focus visible": true,
+        "settings:expected click shadow": true,
+        "settings:idle preserved": true,
+        "settings:pointer outline preserved": true,
+        "settings:keyboard focus visible": true,
+        "library:expected click shadow": true,
+        "library:idle preserved": true,
+        "library:pointer outline preserved": true,
+        "library:keyboard focus visible": true,
+        "profile:expected click shadow": true,
+        "profile:idle preserved": true,
+        "profile:pointer outline preserved": true,
+        "profile:keyboard focus visible": true,
+        "exact reference edit": true
+      },
+      "passed": 17,
+      "total": 17
+    },
+    {
+      "case": "local",
+      "viewport": 1280,
+      "strategy": "local_override",
+      "baseline": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        }
+      },
+      "observed": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        }
+      },
+      "modified": [
+        "settings.css"
+      ],
+      "checks": {
+        "home:expected click shadow": true,
+        "home:idle preserved": true,
+        "home:pointer outline preserved": true,
+        "home:keyboard focus visible": true,
+        "settings:expected click shadow": true,
+        "settings:idle preserved": true,
+        "settings:pointer outline preserved": true,
+        "settings:keyboard focus visible": true,
+        "library:expected click shadow": true,
+        "library:idle preserved": true,
+        "library:pointer outline preserved": true,
+        "library:keyboard focus visible": true,
+        "profile:expected click shadow": true,
+        "profile:idle preserved": true,
+        "profile:pointer outline preserved": true,
+        "profile:keyboard focus visible": true,
+        "exact reference edit": true
+      },
+      "passed": 17,
+      "total": 17
+    },
+    {
+      "case": "local",
+      "viewport": 1280,
+      "strategy": "global_reset",
+      "baseline": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        }
+      },
+      "observed": {
+        "home": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        }
+      },
+      "modified": [
+        "shared.css"
+      ],
+      "checks": {
+        "home:expected click shadow": false,
+        "home:idle preserved": false,
+        "home:pointer outline preserved": true,
+        "home:keyboard focus visible": true,
+        "settings:expected click shadow": true,
+        "settings:idle preserved": true,
+        "settings:pointer outline preserved": true,
+        "settings:keyboard focus visible": true,
+        "library:expected click shadow": true,
+        "library:idle preserved": true,
+        "library:pointer outline preserved": true,
+        "library:keyboard focus visible": true,
+        "profile:expected click shadow": true,
+        "profile:idle preserved": true,
+        "profile:pointer outline preserved": true,
+        "profile:keyboard focus visible": true,
+        "exact reference edit": false
+      },
+      "passed": 14,
+      "total": 17
+    },
+    {
+      "case": "local",
+      "viewport": 1280,
+      "strategy": "evidence_based",
+      "baseline": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        }
+      },
+      "observed": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        }
+      },
+      "modified": [
+        "settings.css"
+      ],
+      "checks": {
+        "home:expected click shadow": true,
+        "home:idle preserved": true,
+        "home:pointer outline preserved": true,
+        "home:keyboard focus visible": true,
+        "settings:expected click shadow": true,
+        "settings:idle preserved": true,
+        "settings:pointer outline preserved": true,
+        "settings:keyboard focus visible": true,
+        "library:expected click shadow": true,
+        "library:idle preserved": true,
+        "library:pointer outline preserved": true,
+        "library:keyboard focus visible": true,
+        "profile:expected click shadow": true,
+        "profile:idle preserved": true,
+        "profile:pointer outline preserved": true,
+        "profile:keyboard focus visible": true,
+        "exact reference edit": true
+      },
+      "passed": 17,
+      "total": 17
+    },
+    {
+      "case": "shared",
+      "viewport": 1280,
+      "strategy": "local_override",
+      "baseline": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        }
+      },
+      "observed": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        }
+      },
+      "modified": [
+        "settings.css"
+      ],
+      "checks": {
+        "home:expected click shadow": true,
+        "home:idle preserved": true,
+        "home:pointer outline preserved": true,
+        "home:keyboard focus visible": true,
+        "settings:expected click shadow": true,
+        "settings:idle preserved": true,
+        "settings:pointer outline preserved": true,
+        "settings:keyboard focus visible": true,
+        "library:expected click shadow": false,
+        "library:idle preserved": true,
+        "library:pointer outline preserved": true,
+        "library:keyboard focus visible": true,
+        "profile:expected click shadow": true,
+        "profile:idle preserved": true,
+        "profile:pointer outline preserved": true,
+        "profile:keyboard focus visible": true,
+        "exact reference edit": false
+      },
+      "passed": 15,
+      "total": 17
+    },
+    {
+      "case": "shared",
+      "viewport": 1280,
+      "strategy": "global_reset",
+      "baseline": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        }
+      },
+      "observed": {
+        "home": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        }
+      },
+      "modified": [
+        "shared.css"
+      ],
+      "checks": {
+        "home:expected click shadow": false,
+        "home:idle preserved": false,
+        "home:pointer outline preserved": true,
+        "home:keyboard focus visible": true,
+        "settings:expected click shadow": true,
+        "settings:idle preserved": true,
+        "settings:pointer outline preserved": true,
+        "settings:keyboard focus visible": true,
+        "library:expected click shadow": true,
+        "library:idle preserved": true,
+        "library:pointer outline preserved": true,
+        "library:keyboard focus visible": true,
+        "profile:expected click shadow": true,
+        "profile:idle preserved": true,
+        "profile:pointer outline preserved": true,
+        "profile:keyboard focus visible": true,
+        "exact reference edit": true
+      },
+      "passed": 15,
+      "total": 17
+    },
+    {
+      "case": "shared",
+      "viewport": 1280,
+      "strategy": "evidence_based",
+      "baseline": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        }
+      },
+      "observed": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        }
+      },
+      "modified": [
+        "shared.css"
+      ],
+      "checks": {
+        "home:expected click shadow": true,
+        "home:idle preserved": true,
+        "home:pointer outline preserved": true,
+        "home:keyboard focus visible": true,
+        "settings:expected click shadow": true,
+        "settings:idle preserved": true,
+        "settings:pointer outline preserved": true,
+        "settings:keyboard focus visible": true,
+        "library:expected click shadow": true,
+        "library:idle preserved": true,
+        "library:pointer outline preserved": true,
+        "library:keyboard focus visible": true,
+        "profile:expected click shadow": true,
+        "profile:idle preserved": true,
+        "profile:pointer outline preserved": true,
+        "profile:keyboard focus visible": true,
+        "exact reference edit": true
+      },
+      "passed": 17,
+      "total": 17
+    },
+    {
+      "case": "independent_example",
+      "viewport": 1280,
+      "strategy": "local_override",
+      "baseline": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        }
+      },
+      "observed": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        }
+      },
+      "modified": [
+        "settings.css"
+      ],
+      "checks": {
+        "home:expected click shadow": true,
+        "home:idle preserved": true,
+        "home:pointer outline preserved": true,
+        "home:keyboard focus visible": true,
+        "settings:expected click shadow": true,
+        "settings:idle preserved": true,
+        "settings:pointer outline preserved": true,
+        "settings:keyboard focus visible": true,
+        "library:expected click shadow": true,
+        "library:idle preserved": true,
+        "library:pointer outline preserved": true,
+        "library:keyboard focus visible": true,
+        "profile:expected click shadow": true,
+        "profile:idle preserved": true,
+        "profile:pointer outline preserved": true,
+        "profile:keyboard focus visible": true,
+        "exact reference edit": true
+      },
+      "passed": 17,
+      "total": 17
+    },
+    {
+      "case": "independent_example",
+      "viewport": 1280,
+      "strategy": "global_reset",
+      "baseline": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        }
+      },
+      "observed": {
+        "home": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        }
+      },
+      "modified": [
+        "shared.css"
+      ],
+      "checks": {
+        "home:expected click shadow": false,
+        "home:idle preserved": false,
+        "home:pointer outline preserved": true,
+        "home:keyboard focus visible": true,
+        "settings:expected click shadow": true,
+        "settings:idle preserved": true,
+        "settings:pointer outline preserved": true,
+        "settings:keyboard focus visible": true,
+        "library:expected click shadow": true,
+        "library:idle preserved": true,
+        "library:pointer outline preserved": true,
+        "library:keyboard focus visible": true,
+        "profile:expected click shadow": false,
+        "profile:idle preserved": true,
+        "profile:pointer outline preserved": true,
+        "profile:keyboard focus visible": true,
+        "exact reference edit": false
+      },
+      "passed": 13,
+      "total": 17
+    },
+    {
+      "case": "independent_example",
+      "viewport": 1280,
+      "strategy": "evidence_based",
+      "baseline": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        }
+      },
+      "observed": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        }
+      },
+      "modified": [
+        "settings.css"
+      ],
+      "checks": {
+        "home:expected click shadow": true,
+        "home:idle preserved": true,
+        "home:pointer outline preserved": true,
+        "home:keyboard focus visible": true,
+        "settings:expected click shadow": true,
+        "settings:idle preserved": true,
+        "settings:pointer outline preserved": true,
+        "settings:keyboard focus visible": true,
+        "library:expected click shadow": true,
+        "library:idle preserved": true,
+        "library:pointer outline preserved": true,
+        "library:keyboard focus visible": true,
+        "profile:expected click shadow": true,
+        "profile:idle preserved": true,
+        "profile:pointer outline preserved": true,
+        "profile:keyboard focus visible": true,
+        "exact reference edit": true
+      },
+      "passed": 17,
+      "total": 17
+    },
+    {
+      "case": "independent_global",
+      "viewport": 1280,
+      "strategy": "local_override",
+      "baseline": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        }
+      },
+      "observed": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        }
+      },
+      "modified": [
+        "settings.css"
+      ],
+      "checks": {
+        "home:expected click shadow": true,
+        "home:idle preserved": true,
+        "home:pointer outline preserved": true,
+        "home:keyboard focus visible": true,
+        "settings:expected click shadow": true,
+        "settings:idle preserved": true,
+        "settings:pointer outline preserved": true,
+        "settings:keyboard focus visible": true,
+        "library:expected click shadow": true,
+        "library:idle preserved": true,
+        "library:pointer outline preserved": true,
+        "library:keyboard focus visible": true,
+        "profile:expected click shadow": false,
+        "profile:idle preserved": true,
+        "profile:pointer outline preserved": true,
+        "profile:keyboard focus visible": true,
+        "exact reference edit": false
+      },
+      "passed": 15,
+      "total": 17
+    },
+    {
+      "case": "independent_global",
+      "viewport": 1280,
+      "strategy": "global_reset",
+      "baseline": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        }
+      },
+      "observed": {
+        "home": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        }
+      },
+      "modified": [
+        "shared.css"
+      ],
+      "checks": {
+        "home:expected click shadow": false,
+        "home:idle preserved": false,
+        "home:pointer outline preserved": true,
+        "home:keyboard focus visible": true,
+        "settings:expected click shadow": true,
+        "settings:idle preserved": true,
+        "settings:pointer outline preserved": true,
+        "settings:keyboard focus visible": true,
+        "library:expected click shadow": true,
+        "library:idle preserved": true,
+        "library:pointer outline preserved": true,
+        "library:keyboard focus visible": true,
+        "profile:expected click shadow": true,
+        "profile:idle preserved": true,
+        "profile:pointer outline preserved": true,
+        "profile:keyboard focus visible": true,
+        "exact reference edit": false
+      },
+      "passed": 14,
+      "total": 17
+    },
+    {
+      "case": "independent_global",
+      "viewport": 1280,
+      "strategy": "evidence_based",
+      "baseline": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        }
+      },
+      "observed": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        }
+      },
+      "modified": [
+        "profile.css",
+        "settings.css"
+      ],
+      "checks": {
+        "home:expected click shadow": true,
+        "home:idle preserved": true,
+        "home:pointer outline preserved": true,
+        "home:keyboard focus visible": true,
+        "settings:expected click shadow": true,
+        "settings:idle preserved": true,
+        "settings:pointer outline preserved": true,
+        "settings:keyboard focus visible": true,
+        "library:expected click shadow": true,
+        "library:idle preserved": true,
+        "library:pointer outline preserved": true,
+        "library:keyboard focus visible": true,
+        "profile:expected click shadow": true,
+        "profile:idle preserved": true,
+        "profile:pointer outline preserved": true,
+        "profile:keyboard focus visible": true,
+        "exact reference edit": true
+      },
+      "passed": 17,
+      "total": 17
+    },
+    {
+      "case": "explicit_local_boundary_hold",
+      "viewport": 1280,
+      "strategy": "local_override",
+      "baseline": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        }
+      },
+      "observed": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        }
+      },
+      "modified": [
+        "settings.css"
+      ],
+      "checks": {
+        "home:expected click shadow": true,
+        "home:idle preserved": true,
+        "home:pointer outline preserved": true,
+        "home:keyboard focus visible": true,
+        "settings:expected click shadow": false,
+        "settings:idle preserved": true,
+        "settings:pointer outline preserved": true,
+        "settings:keyboard focus visible": true,
+        "library:expected click shadow": true,
+        "library:idle preserved": true,
+        "library:pointer outline preserved": true,
+        "library:keyboard focus visible": true,
+        "profile:expected click shadow": true,
+        "profile:idle preserved": true,
+        "profile:pointer outline preserved": true,
+        "profile:keyboard focus visible": true,
+        "exact reference edit": false
+      },
+      "passed": 15,
+      "total": 17
+    },
+    {
+      "case": "explicit_local_boundary_hold",
+      "viewport": 1280,
+      "strategy": "global_reset",
+      "baseline": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        }
+      },
+      "observed": {
+        "home": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        }
+      },
+      "modified": [
+        "shared.css"
+      ],
+      "checks": {
+        "home:expected click shadow": false,
+        "home:idle preserved": false,
+        "home:pointer outline preserved": true,
+        "home:keyboard focus visible": true,
+        "settings:expected click shadow": false,
+        "settings:idle preserved": true,
+        "settings:pointer outline preserved": true,
+        "settings:keyboard focus visible": true,
+        "library:expected click shadow": false,
+        "library:idle preserved": true,
+        "library:pointer outline preserved": true,
+        "library:keyboard focus visible": true,
+        "profile:expected click shadow": true,
+        "profile:idle preserved": true,
+        "profile:pointer outline preserved": true,
+        "profile:keyboard focus visible": true,
+        "exact reference edit": false
+      },
+      "passed": 12,
+      "total": 17
+    },
+    {
+      "case": "explicit_local_boundary_hold",
+      "viewport": 1280,
+      "strategy": "evidence_based",
+      "baseline": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        }
+      },
+      "observed": {
+        "home": {
+          "idle": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "clicked": "rgba(0, 0, 0, 0.3) 0px 3px 8px 0px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        },
+        "settings": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "library": {
+          "idle": "none",
+          "clicked": "rgb(203, 52, 70) 0px 0px 0px 4px",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": true
+        },
+        "profile": {
+          "idle": "none",
+          "clicked": "none",
+          "pointer_outline": "none",
+          "keyboard": {
+            "focused": true,
+            "outline": "solid",
+            "width": 3
+          },
+          "artifact": false
+        }
+      },
+      "modified": [],
+      "checks": {
+        "home:expected click shadow": true,
+        "home:idle preserved": true,
+        "home:pointer outline preserved": true,
+        "home:keyboard focus visible": true,
+        "settings:expected click shadow": true,
+        "settings:idle preserved": true,
+        "settings:pointer outline preserved": true,
+        "settings:keyboard focus visible": true,
+        "library:expected click shadow": true,
+        "library:idle preserved": true,
+        "library:pointer outline preserved": true,
+        "library:keyboard focus visible": true,
+        "profile:expected click shadow": true,
+        "profile:idle preserved": true,
+        "profile:pointer outline preserved": true,
+        "profile:keyboard focus visible": true,
+        "exact reference edit": true
+      },
+      "passed": 17,
+      "total": 17
+    }
+  ],
+  "summary": {
+    "local_override": {
+      "passed": 158,
+      "total": 170,
+      "all_pass_runs": 4,
+      "runs": 10
+    },
+    "global_reset": {
+      "passed": 136,
+      "total": 170,
+      "all_pass_runs": 0,
+      "runs": 10
+    },
+    "evidence_based": {
+      "passed": 170,
+      "total": 170,
+      "all_pass_runs": 10,
+      "runs": 10
+    },
+    "policy": {
+      "passed": 10,
+      "total": 10
+    }
+  }
+}
