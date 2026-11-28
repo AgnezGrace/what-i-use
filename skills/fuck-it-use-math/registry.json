@@ -1,0 +1,141 @@
+{
+  "viewBox": [
+    0,
+    0,
+    24,
+    24
+  ],
+  "stroke": 1.75,
+  "icons": {
+    "home": {
+      "label": "Home",
+      "file": "icons/home.svg",
+      "geometry": "<path d=\"M3 11 L12 3 L21 11 M5 10 V20 H10 V14 H14 V20 H19 V10\"/>"
+    },
+    "back": {
+      "label": "Back",
+      "file": "icons/back.svg",
+      "geometry": "<path d=\"M20,12 L4,12 M8.5,8 L4,12 L8.5,16\"/>"
+    },
+    "forward": {
+      "label": "Forward",
+      "file": "icons/forward.svg",
+      "geometry": "<path d=\"M4,12 L20,12 M15.5,16 L20,12 L15.5,8\"/>"
+    },
+    "menu": {
+      "label": "Menu",
+      "file": "icons/menu.svg",
+      "geometry": "<path d=\"M4 6 H20 M4 12 H20 M4 18 H20\"/>"
+    },
+    "external": {
+      "label": "External",
+      "file": "icons/external.svg",
+      "geometry": "<path d=\"M13 4 H20 V11 M20 4 L11 13 M10 5 H5 Q4 5 4 6 V19 Q4 20 5 20 H18 Q19 20 19 19 V14\"/>"
+    },
+    "search": {
+      "label": "Search",
+      "file": "icons/search.svg",
+      "geometry": "<circle cx=\"10\" cy=\"10\" r=\"6\"/><path d=\"M14.2426 14.2426 L20 20\"/>"
+    },
+    "add": {
+      "label": "Add",
+      "file": "icons/add.svg",
+      "geometry": "<path d=\"M12 4 V20 M4 12 H20\"/>"
+    },
+    "close": {
+      "label": "Close",
+      "file": "icons/close.svg",
+      "geometry": "<path d=\"M5 5 L19 19 M19 5 L5 19\"/>"
+    },
+    "edit": {
+      "label": "Edit",
+      "file": "icons/edit.svg",
+      "geometry": "<path d=\"M4 16 L16 4 Q17 3 18 4 L20 6 Q21 7 20 8 L8 20 H4 Z M14 6 L18 10\"/>"
+    },
+    "save": {
+      "label": "Save",
+      "file": "icons/save.svg",
+      "geometry": "<path d=\"M5 3 H17 L21 7 V19 Q21 21 19 21 H5 Q3 21 3 19 V5 Q3 3 5 3 Z M7 3 V9 H16 V3 M7 21 V14 H17 V21\"/>"
+    },
+    "delete": {
+      "label": "Delete",
+      "file": "icons/delete.svg",
+      "geometry": "<path d=\"M4 6 H20 M9 6 V3 H15 V6 M6 6 L7 20 Q7 21 8 21 H16 Q17 21 17 20 L18 6 M10 10 V17 M14 10 V17\"/>"
+    },
+    "copy": {
+      "label": "Copy",
+      "file": "icons/copy.svg",
+      "geometry": "<rect x=\"8\" y=\"8\" width=\"13\" height=\"13\" rx=\"2\"/><path d=\"M16 5 V4 Q16 3 15 3 H5 Q3 3 3 5 V15 Q3 16 5 16\"/>"
+    },
+    "download": {
+      "label": "Download",
+      "file": "icons/download.svg",
+      "geometry": "<path d=\"M12,3 L12,15 M8,11 L12,15 L16,11\"/><path d=\"M4 15 V20 H20 V15\"/>"
+    },
+    "upload": {
+      "label": "Upload",
+      "file": "icons/upload.svg",
+      "geometry": "<path d=\"M12,16 L12,4 M16,8 L12,4 L8,8\"/><path d=\"M4 15 V20 H20 V15\"/>"
+    },
+    "document": {
+      "label": "Document",
+      "file": "icons/document.svg",
+      "geometry": "<path d=\"M6 3 H14 L19 8 V20 Q19 21 18 21 H6 Q5 21 5 20 V4 Q5 3 6 3 Z M14 3 V8 H19 M8 12 H16 M8 16 H16\"/>"
+    },
+    "folder": {
+      "label": "Folder",
+      "file": "icons/folder.svg",
+      "geometry": "<path d=\"M3 7 Q3 5 5 5 H10 L12 8 H19 Q21 8 21 10 V18 Q21 20 19 20 H5 Q3 20 3 18 Z\"/>"
+    },
+    "image": {
+      "label": "Image",
+      "file": "icons/image.svg",
+      "geometry": "<rect x=\"3\" y=\"4\" width=\"18\" height=\"16\" rx=\"2\"/><circle cx=\"8\" cy=\"9\" r=\"1.5\"/><path d=\"M4 18 L10 12 L14 16 L17 13 L20 16\"/>"
+    },
+    "library": {
+      "label": "Library",
+      "file": "icons/library.svg",
+      "geometry": "<rect x=\"3\" y=\"4\" width=\"5\" height=\"16\" rx=\"1\"/><rect x=\"9\" y=\"4\" width=\"5\" height=\"16\" rx=\"1\"/><path d=\"M16 5 L18 4.5 L21 19 L19 19.5 Z\"/>"
+    },
+    "check": {
+      "label": "Check",
+      "file": "icons/check.svg",
+      "geometry": "<path d=\"M4 12 L9 17 L20 6\"/>"
+    },
+    "warning": {
+      "label": "Warning",
+      "file": "icons/warning.svg",
+      "geometry": "<path d=\"M12 3 Q13 3 14 5 L21 18 Q22 20 19 20 H5 Q2 20 3 18 L10 5 Q11 3 12 3 Z M12 9 V13 M12 16 H12.01\"/>"
+    },
+    "info": {
+      "label": "Info",
+      "file": "icons/info.svg",
+      "geometry": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 11 V17 M12 7 H12.01\"/>"
+    },
+    "lock": {
+      "label": "Lock",
+      "file": "icons/lock.svg",
+      "geometry": "<rect x=\"5\" y=\"10\" width=\"14\" height=\"11\" rx=\"2\"/><path d=\"M8 10 V7 A4 4 0 0 1 16 7 V10 M12 14 V17\"/>"
+    },
+    "eye": {
+      "label": "Eye",
+      "file": "icons/eye.svg",
+      "geometry": "<path d=\"M3 12 Q12 -1 21 12 Q12 25 3 12 Z\"/><circle cx=\"12\" cy=\"12\" r=\"3\"/>"
+    },
+    "settings": {
+      "label": "Settings",
+      "file": "icons/settings.svg",
+      "geometry": "<polygon points=\"9.939,5.2057 11.0982,2.8443 12.9018,2.8443 14.061,5.2057 15.3469,5.7384 17.8364,4.8883 19.1117,6.1636 18.2616,8.6531 18.7943,9.939 21.1557,11.0982 21.1557,12.9018 18.7943,14.061 18.2616,15.3469 19.1117,17.8364 17.8364,19.1117 15.3469,18.2616 14.061,18.7943 12.9018,21.1557 11.0982,21.1557 9.939,18.7943 8.6531,18.2616 6.1636,19.1117 4.8883,17.8364 5.7384,15.3469 5.2057,14.061 2.8443,12.9018 2.8443,11.0982 5.2057,9.939 5.7384,8.6531 4.8883,6.1636 6.1636,4.8883 8.6531,5.7384\"/><circle cx=\"12\" cy=\"12\" r=\"3.1\"/>"
+    },
+    "layers": {
+      "label": "Layers",
+      "file": "icons/layers.svg",
+      "geometry": "<path d=\"M3 8 L12 3 L21 8 L12 13 Z M3 12 L12 17 L21 12 M3 16 L12 21 L21 16\"/>"
+    },
+    "orbit": {
+      "label": "Orbit",
+      "file": "icons/orbit.svg",
+      "geometry": "<ellipse cx=\"12\" cy=\"12\" rx=\"9\" ry=\"4\" transform=\"rotate(40 12 12)\"/><ellipse cx=\"12\" cy=\"12\" rx=\"9\" ry=\"4\" transform=\"rotate(-40 12 12)\"/><circle cx=\"12\" cy=\"12\" r=\"1.3\" fill=\"currentColor\" stroke=\"none\"/>"
+    }
+  }
+}
