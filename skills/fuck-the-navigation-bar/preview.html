@@ -1,0 +1,73 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ghost Orbit — Navigation Lab</title><style>
+*{box-sizing:border-box}html{color-scheme:dark}body{margin:0;background:#111318;color:#eef1f5;font:15px system-ui,sans-serif}header{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 16px;border-bottom:1px solid #343a44}header strong{font-size:17px;letter-spacing:-.04em}button,select,input{font:inherit;color:inherit;background:#222832;border:1px solid #606c7c;border-radius:10px;min-height:44px;padding:8px 12px}button{cursor:pointer}button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid #b5d0ff;outline-offset:2px}main{max-width:960px;margin:auto;padding:12px}aside{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:12px}aside label{display:flex;align-items:center;gap:8px}#stage{position:relative;isolation:isolate;min-height:180px;height:clamp(180px,calc(100dvh - 190px),620px);border:1px solid #475263;border-radius:18px;background:radial-gradient(ellipse at 50% 35%,#263445,#181d25 70%);user-select:none;overflow:visible;display:grid;place-items:center}#gesture-surface{position:absolute;inset:0;display:grid;place-items:center;touch-action:none;border-radius:inherit}#stage .copy{pointer-events:none;text-align:center;padding:24px;color:#c8d1df;max-width:320px}h1{font-size:clamp(26px,5vw,44px);font-weight:550;letter-spacing:-.06em;color:#f5f7fc;margin:0 0 8px}.copy p{line-height:1.5;margin:0}#menu{position:absolute;inset:0;pointer-events:none;z-index:2}#menu[hidden]{display:none}.action{display:grid;place-items:center;padding:0;position:absolute;background:#303d50;border:1px solid #94a5bb;border-radius:50%;pointer-events:auto;transform:translate(-50%,-50%);animation:appear 150ms ease-out}.action svg{width:22px;height:22px;stroke:#f4f7fc;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;pointer-events:none}.action[data-hot=true],.action:hover{background:#455e80}.neutral{position:absolute;transform:translate(-50%,-50%);border:1px dashed #a9bed9;border-radius:50%;pointer-events:none}.list{position:absolute;inset:8px;overflow:auto;overscroll-behavior:contain;touch-action:pan-y;pointer-events:auto;background:#1d2632;border:1px solid #8795a9;border-radius:12px;padding:10px;display:flex;flex-direction:column;gap:8px}.list .action{position:static;transform:none;border-radius:8px;display:flex;gap:12px;align-items:center;justify-content:flex-start;min-height:48px;padding:8px 12px;flex:none;width:100%}.list .action svg{flex:none}.list .action span{overflow-wrap:anywhere}.list-heading{margin:0;font-size:14px;color:#d0dcf0}.footer{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:12px 0;color:#b7c2d0;font-size:13px}#status{flex:1}#protected{max-width:160px;min-width:0} @keyframes appear{from{opacity:0}to{opacity:1}}@media(prefers-reduced-motion:reduce){.action{animation:none}}@media(forced-colors:active){button:focus-visible{outline:2px solid Highlight}.action{border:1px solid ButtonText}}
+</style></head><body><header><strong>GHOST ORBIT</strong><button id="trigger" aria-controls="menu" aria-expanded="false">Actions</button></header><main><aside><label>Hand <select id="hand"><option value="auto">Automatic</option><option value="left">Left</option><option value="right">Right</option></select></label><label>Count <select id="count"><option>7</option><option>4</option><option>1</option></select></label></aside><div id="stage" aria-label="Gesture demonstration canvas"><div id="gesture-surface"><div class="copy"><h1>Space to think.</h1><p>Hold anywhere on this canvas, then slide or tap. Right-click with a mouse. Actions is the keyboard alternative.</p></div></div><div id="menu" role="group" aria-label="Workspace actions" hidden></div></div><div class="footer"><output id="status" aria-live="polite">Ready</output><input id="protected" aria-label="Ordinary editable field" placeholder="Native text input"></div></main><script>/* Ghost Orbit: deterministic, dependency-free layout in CSS pixels. */
+(function(root){
+'use strict';
+const rad = x=>x*Math.PI/180;
+const distance=(a,b)=>Math.hypot(a.x-b.x,a.y-b.y);
+function overlaps(a,b,gap=0){return Math.abs(a.x-b.x)<(a.w+b.w)/2+gap-1e-7 && Math.abs(a.y-b.y)<(a.h+b.h)/2+gap-1e-7;}
+function fits(p,b,margin){return p.x-p.w/2>=b.left+margin-1e-7 && p.x+p.w/2<=b.right-margin+1e-7 && p.y-p.h/2>=b.top+margin-1e-7 && p.y+p.h/2<=b.bottom-margin+1e-7;}
+function solve({bounds:b,anchor:a,count:n,hand='auto',pointer='touch',reserved=[]}){
+ if(!b||!a||![b.left,b.top,b.right,b.bottom,a.x,a.y].every(Number.isFinite)||b.right<=b.left||b.bottom<=b.top||!Number.isInteger(n)||n<1||n>7||!['auto','left','right'].includes(hand)||!['touch','mouse','pen','keyboard'].includes(pointer)||!Array.isArray(reserved)||reserved.some(r=>![r.x,r.y,r.w,r.h].every(Number.isFinite)||r.w<0||r.h<0)) throw new RangeError('Invalid layout input');
+ const target=pointer==='mouse'||pointer==='keyboard'?44:48, gap=8, margin=8, neutral=pointer==='touch'?30:18;
+ const fallback={mode:'list',target,gap,margin,neutral,items:[]};
+ if(a.x<b.left||a.x>b.right||a.y<b.top||a.y>b.bottom) return fallback;
+ // Preference blends inward direction with an approximate hand avoidance vector.
+ const dx=(b.left+b.right)/2-a.x,dy=(b.top+b.bottom)/2-a.y;
+ let vx=dx/Math.max(1,(b.right-b.left)/2),vy=dy/Math.max(1,(b.bottom-b.top)/2);
+ if(pointer==='touch'){vx+=hand==='left'?.48:hand==='right'?-.48:0;vy-=.38;}
+ const preferred=Math.hypot(vx,vy)<.001?-Math.PI/2:Math.atan2(vy,vx);
+ // Approximate exclusion only for a declared hand; automatic makes no claim about grip.
+ const occlusion=pointer==='touch'&&hand!=='auto'?{x:a.x+(hand==='left'?-37:37),y:a.y+47,w:58,h:76}:null;
+ const angles=[0,15,-15,30,-30,45,-45,60,-60,90,-90,120,-120,150,-150,180];
+ const spreads=pointer==='touch'?[150,180,120,210,240,90,75,60,360]:[360,180,150,240,120,90,75,60];
+ const maxRadius=Math.min(260,Math.hypot(b.right-b.left,b.bottom-b.top));
+ let best=null;
+ for(const spread of spreads){
+  const step=n===1?0:rad(spread)/(spread===360?n:n-1);
+  // Square hit regions need conservative diagonal clearance; exact AABB checks follow.
+  const lower=Math.max(neutral+target/Math.SQRT2, n===1?0:(target+gap)/(2*Math.sin(step/2)));
+  for(let r=Math.ceil(lower/4)*4;r<=maxRadius;r+=4){
+   for(const offset of angles){
+    const base=preferred+rad(offset)-(n===1?0:step*(n-1)/2);
+    const items=[];
+    for(let i=0;i<n;i++){
+     const t=base+i*step,p={id:i,x:a.x+r*Math.cos(t),y:a.y+r*Math.sin(t),w:target,h:target};
+     if(!fits(p,b,margin)||distance(p,a)<neutral+target/Math.SQRT2-1e-7||reserved.some(q=>overlaps(p,q,gap))||items.some(q=>overlaps(p,q,gap))||(occlusion&&overlaps(p,occlusion,0)))break;
+     items.push(p);
+    }
+    if(items.length!==n)continue;
+    const score=r+Math.abs(offset)*.30+(pointer==='touch'?Math.abs(spread-150)*.13:Math.abs(spread-360)*.06);
+    if(!best||score<best.score-1e-7)best={mode:'orbit',target,gap,margin,neutral,items,radius:r,spread,angle:base,score};
+   }
+  }
+ }
+ return best||fallback;
+}
+const api={solve,overlaps,fits,distance};if(typeof module!=='undefined')module.exports=api;else root.GhostGeometry=api;
+})(typeof globalThis!=='undefined'?globalThis:this);
+</script><script>
+'use strict';const $=s=>document.querySelector(s),stage=$('#stage'),menu=$('#menu'),trigger=$('#trigger'),status=$('#status');
+const commands=[['home','Home','M3 11L12 3 21 11 M5 10V20H10V14H14V20H19V10'],['search','Search','M16 10A6 6 0 1 1 4 10A6 6 0 1 1 16 10 M14.24 14.24L21 21'],['create','Create','M12 4V20 M4 12H20'],['library','Library','M3 6H10L13 9H21V20H3Z'],['saved','Saved','M6 3H18V21L12 16L6 21Z'],['export','Export','M12 3V15 M7 10L12 15 17 10 M4 16V21H20V16'],['settings','Settings','M12 3L15 5 19 5 21 9 19 12 21 15 19 19 15 19 12 21 9 19 5 19 3 15 5 12 3 9 5 5 9 5Z M15 12A3 3 0 1 1 9 12A3 3 0 1 1 15 12']];
+let state='idle',pending=null,layout=null,anchor=null,previous=null,commits=0;let ignoreUntil=0;
+function bounds(){return {left:0,top:0,right:stage.clientWidth,bottom:stage.clientHeight};}
+function point(e){const r=stage.getBoundingClientRect();return {x:e.clientX-r.left-stage.clientLeft,y:e.clientY-r.top-stage.clientTop};}
+function clearPending(){if(pending){clearTimeout(pending.timer);pending=null;}}
+function close(restore=true){const p=pending;clearPending();state='idle';layout=null;anchor=null;menu.hidden=true;menu.replaceChildren();trigger.setAttribute('aria-expanded','false');if(p&&stage.hasPointerCapture(p.id))stage.releasePointerCapture(p.id);if(restore&&(previous===trigger||menu.contains(document.activeElement)||document.activeElement===document.body)) (previous?.isConnected?previous:trigger).focus({preventScroll:true});previous=null;}
+function commit(id){if(state==='idle'||!commands.some(c=>c[0]===id))return;commits++;status.value=`Selected: ${commands.find(c=>c[0]===id)[1]} (${commits})`;close();}
+function buttons(){return [...menu.querySelectorAll('button')];}
+function open(a,pointer,held=false,forceList=false){anchor=a;previous=document.activeElement;const b=bounds();layout=GhostGeometry.solve({bounds:b,anchor:a,count:Number($('#count').value),hand:$('#hand').value,pointer});if(forceList)layout={...layout,mode:'list',items:[]};state=held?'held':'tap';menu.hidden=false;menu.replaceChildren();trigger.setAttribute('aria-expanded','true');const parent=layout.mode==='list'?document.createElement('div'):menu;
+if(layout.mode==='list'){parent.className='list';const h=document.createElement('p');h.className='list-heading';h.textContent='Choose an action';parent.append(h);menu.append(parent);}else{const z=document.createElement('div');z.className='neutral';z.style.cssText=`left:${a.x}px;top:${a.y}px;width:${layout.neutral*2}px;height:${layout.neutral*2}px`;menu.append(z);}
+commands.slice(0,Number($('#count').value)).forEach((c,i)=>{const btn=document.createElement('button');btn.type='button';btn.className='action';btn.dataset.id=c[0];btn.setAttribute('aria-label',c[1]);btn.title=c[1];btn.innerHTML=`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="${c[2]}"/></svg>`;if(layout.mode==='list'){const s=document.createElement('span');s.textContent=c[1];btn.append(s);}else{const p=layout.items[i];btn.style.cssText=`left:${p.x}px;top:${p.y}px;width:${p.w}px;height:${p.h}px`;}btn.addEventListener('click',()=>{if(state==='tap'&&performance.now()>=ignoreUntil)commit(c[0]);});parent.append(btn);});
+if(!held)buttons()[0]?.focus({preventScroll:true});}
+function hit(p){if(layout?.mode!=='orbit')return null;return layout.items.find(q=>Math.abs(q.x-p.x)<=q.w/2&&Math.abs(q.y-p.y)<=q.h/2);}
+stage.addEventListener('pointerdown',e=>{if(!e.isPrimary){if(state==='arming'||state==='held')close(false);return;}if(e.button!==0||!e.target.closest('#gesture-surface'))return;if(state!=='idle'){close(false);return;}const a=point(e);state='arming';pending={id:e.pointerId,a,pointer:e.pointerType,timer:setTimeout(()=>{if(state==='arming')open(a,e.pointerType,true);},320)};stage.setPointerCapture(e.pointerId);});
+stage.addEventListener('pointermove',e=>{if(pending?.id!==e.pointerId)return;const p=point(e);if(state==='arming'&&Math.hypot(p.x-pending.a.x,p.y-pending.a.y)>10)close(false);else if(state==='held'){const h=hit(p);buttons().forEach((b,i)=>b.dataset.hot=String(h?.id===i));}});
+stage.addEventListener('pointerup',e=>{if(pending?.id!==e.pointerId)return;const p=point(e);if(state==='arming'){close(false);return;}if(state==='held'){const h=hit(p);clearPending();if(h){ignoreUntil=performance.now()+250;commit(commands[h.id][0]);}else if(layout.mode==='list'||Math.hypot(p.x-anchor.x,p.y-anchor.y)<=layout.neutral){state='tap';ignoreUntil=performance.now()+100;buttons().forEach(b=>delete b.dataset.hot);buttons()[0]?.focus({preventScroll:true});}else close(false);}});
+for(const name of ['pointercancel','lostpointercapture'])stage.addEventListener(name,e=>{if(pending?.id===e.pointerId)close(false);});
+stage.addEventListener('contextmenu',e=>{if(e.target.closest('button,.list'))return;e.preventDefault();if(e.pointerType==='touch'||pending?.pointer==='touch'||state==='held')return;close(false);open(point(e),'mouse');});
+trigger.addEventListener('click',()=>{if(state!=='idle'){close();return;}const b=bounds();open({x:b.right/2,y:b.bottom/2},'keyboard',false,true);});
+document.addEventListener('pointerdown',e=>{if(state==='tap'&&!menu.contains(e.target)&&!trigger.contains(e.target)&&!stage.contains(e.target))close(false);});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&state!=='idle'){e.preventDefault();close();}});window.addEventListener('resize',()=>{if(state!=='idle')close();});window.addEventListener('blur',()=>{if(state!=='idle')close(false);});document.addEventListener('visibilitychange',()=>{if(document.hidden)close(false);});for(const el of [$('#hand'),$('#count')])el.addEventListener('change',()=>close(false));
+window.lab={snapshot:()=>({state,mode:layout?.mode,commits,anchor,layout}),openAt:(x,y,pointer='touch')=>{close(false);open({x,y},pointer);}};
+</script></body></html>
