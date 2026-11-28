@@ -1,6 +1,6 @@
 # What I Use
 
-A small collection of skills I use, in two separate catalogs: `skills/` for the main set, and `optional/` for additional skills. Copy what you need.
+A small collection of skills I use, in three separate catalogs: `skills/` for the main set, `optional/` for additional skills, and `DESIGN/` for design systems. Copy what you need.
 
 ## Skills
 
@@ -22,6 +22,12 @@ A small collection of skills I use, in two separate catalogs: `skills/` for the 
 | [it-compiles-so-what](optional/it-compiles-so-what.md) | Verify actual behavior through risk-based tests; use for implementation, debugging, regression checks, integration, and release validation. |
 | [publish-is-not-a-prayer](optional/publish-is-not-a-prayer.md) | Verify first-release readiness and safe distribution; use before publishing, deploying, packaging, or recommending a production release. |
 | [congratulations-youve-been-hacked](optional/congratulations-youve-been-hacked.md) | Secure software built with AI, especially when a user delegates technical decisions or shows limited security knowledge; activate for authentication, user data, secrets, uploads, public exposure, deployment, and pre-release security verification. |
+
+## Design
+
+| Design | What it is |
+| --- | --- |
+| [Blueberry](DESIGN/Blueberry/DESIGN.md) | Premium web design system: quiet precision, four product modes, Berry pigment tokens, 44px targets, and a clean press and focus edge contract. |
 
 ## Install
 
@@ -71,6 +77,10 @@ Optional skills:
 - It Compiles. So What?: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/optional/it-compiles-so-what.md
 - Publish Is Not a Prayer: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/optional/publish-is-not-a-prayer.md
 - Congratulations, You've Been Hacked: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/optional/congratulations-youve-been-hacked.md
+
+Design:
+
+- Blueberry: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/DESIGN/Blueberry/DESIGN.md
 
 Save it as `skill.md` (or `SKILL.md`, depending on your agent) inside a folder named after the skill.
 
