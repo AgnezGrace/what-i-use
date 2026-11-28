@@ -17,12 +17,13 @@ A small collection of skills I use, in three separate catalogs: `skills/` for th
 
 | Skill | What it does |
 | --- | --- |
-| [architecture-before-prayer](optional/architecture-before-prayer.md) | Establish a proportional, testable project foundation before implementation; use for new products, inherited projects with unclear boundaries, and architectural decisions. |
-| [your-database-is-not-a-trash-can](optional/your-database-is-not-a-trash-can.md) | Protect user data, trust boundaries, and operational integrity; use when implementing persistence, authentication, imports, external services, migrations, or recovery. |
-| [put-the-chainsaw-down](optional/put-the-chainsaw-down.md) | Make focused changes while protecting existing behavior; use for features, bug fixes, refactors, dependency updates, and maintenance. |
-| [it-compiles-so-what](optional/it-compiles-so-what.md) | Verify actual behavior through risk-based tests; use for implementation, debugging, regression checks, integration, and release validation. |
-| [publish-is-not-a-prayer](optional/publish-is-not-a-prayer.md) | Verify first-release readiness and safe distribution; use before publishing, deploying, packaging, or recommending a production release. |
-| [congratulations-youve-been-hacked](optional/congratulations-youve-been-hacked.md) | Secure software built with AI, especially when a user delegates technical decisions or shows limited security knowledge; activate for authentication, user data, secrets, uploads, public exposure, deployment, and pre-release security verification. |
+| [architecture-before-prayer](optional/architecture-before-prayer/architecture-before-prayer.md) | Establish a proportional, testable project foundation before implementation; use for new products, inherited projects with unclear boundaries, and architectural decisions. |
+| [your-database-is-not-a-trash-can](optional/your-database-is-not-a-trash-can/your-database-is-not-a-trash-can.md) | Protect user data, trust boundaries, and operational integrity; use when implementing persistence, authentication, imports, external services, migrations, or recovery. |
+| [put-the-chainsaw-down](optional/put-the-chainsaw-down/put-the-chainsaw-down.md) | Make focused changes while protecting existing behavior; use for features, bug fixes, refactors, dependency updates, and maintenance. |
+| [it-compiles-so-what](optional/it-compiles-so-what/it-compiles-so-what.md) | Verify actual behavior through risk-based tests; use for implementation, debugging, regression checks, integration, and release validation. |
+| [publish-is-not-a-prayer](optional/publish-is-not-a-prayer/publish-is-not-a-prayer.md) | Verify first-release readiness and safe distribution; use before publishing, deploying, packaging, or recommending a production release. |
+| [congratulations-youve-been-hacked](optional/congratulations-youve-been-hacked/congratulations-youve-been-hacked.md) | Secure software built with AI, especially when a user delegates technical decisions or shows limited security knowledge; activate for authentication, user data, secrets, uploads, public exposure, deployment, and pre-release security verification. |
+| [the-second-human](optional/the-second-human/SKILL.md) | Communicate naturally and context-awarely: turn protocol, register, conversational repair, editing restraint, and honest AI identity. |
 
 ## Design
 
@@ -73,12 +74,13 @@ Download one file, no clone needed:
 
 Optional skills:
 
-- Architecture Before Prayer: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/optional/architecture-before-prayer.md
-- Your Database Is Not a Trash Can: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/optional/your-database-is-not-a-trash-can.md
-- Put the Chainsaw Down: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/optional/put-the-chainsaw-down.md
-- It Compiles. So What?: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/optional/it-compiles-so-what.md
-- Publish Is Not a Prayer: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/optional/publish-is-not-a-prayer.md
-- Congratulations, You've Been Hacked: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/optional/congratulations-youve-been-hacked.md
+- Architecture Before Prayer: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/optional/architecture-before-prayer/architecture-before-prayer.md
+- Your Database Is Not a Trash Can: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/optional/your-database-is-not-a-trash-can/your-database-is-not-a-trash-can.md
+- Put the Chainsaw Down: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/optional/put-the-chainsaw-down/put-the-chainsaw-down.md
+- It Compiles. So What?: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/optional/it-compiles-so-what/it-compiles-so-what.md
+- Publish Is Not a Prayer: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/optional/publish-is-not-a-prayer/publish-is-not-a-prayer.md
+- Congratulations, You've Been Hacked: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/optional/congratulations-youve-been-hacked/congratulations-youve-been-hacked.md
+- The Second Human: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/optional/the-second-human/SKILL.md
 
 Design:
 

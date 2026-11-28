@@ -1,0 +1,434 @@
+{
+  "method": "Deterministic package and authored-fixture lexical checks; no live model experiment",
+  "summary": {
+    "fixtures": {
+      "passed": 40,
+      "total": 40
+    },
+    "mutation": {
+      "passed": 20,
+      "total": 20
+    },
+    "structure": {
+      "passed": 23,
+      "total": 23
+    }
+  },
+  "checks": [
+    {
+      "group": "structure",
+      "name": "frontmatter format",
+      "passed": true
+    },
+    {
+      "group": "structure",
+      "name": "name matches folder",
+      "passed": true
+    },
+    {
+      "group": "structure",
+      "name": "description length",
+      "passed": true
+    },
+    {
+      "group": "structure",
+      "name": "AGENTS.md",
+      "passed": true
+    },
+    {
+      "group": "structure",
+      "name": "agent.md",
+      "passed": true
+    },
+    {
+      "group": "structure",
+      "name": "the-second-human.md",
+      "passed": true
+    },
+    {
+      "group": "structure",
+      "name": "README.md",
+      "passed": true
+    },
+    {
+      "group": "structure",
+      "name": "adapters/SOUL.md",
+      "passed": true
+    },
+    {
+      "group": "structure",
+      "name": "tests/evaluation-rubric.md",
+      "passed": true
+    },
+    {
+      "group": "structure",
+      "name": "ten unique references",
+      "passed": true
+    },
+    {
+      "group": "structure",
+      "name": "reference: references/human-history/01-origins-and-symbols.md",
+      "passed": true
+    },
+    {
+      "group": "structure",
+      "name": "reference: references/human-history/02-society-and-memory.md",
+      "passed": true
+    },
+    {
+      "group": "structure",
+      "name": "reference: references/human-history/03-media-and-modernity.md",
+      "passed": true
+    },
+    {
+      "group": "structure",
+      "name": "reference: references/human-language/01-pragmatics.md",
+      "passed": true
+    },
+    {
+      "group": "structure",
+      "name": "reference: references/human-language/02-voice-and-register.md",
+      "passed": true
+    },
+    {
+      "group": "structure",
+      "name": "reference: references/human-language/03-language-and-culture.md",
+      "passed": true
+    },
+    {
+      "group": "structure",
+      "name": "reference: references/human-interaction/01-turns-and-repair.md",
+      "passed": true
+    },
+    {
+      "group": "structure",
+      "name": "reference: references/human-interaction/02-social-context.md",
+      "passed": true
+    },
+    {
+      "group": "structure",
+      "name": "reference: references/human-interaction/03-editorial-restraint.md",
+      "passed": true
+    },
+    {
+      "group": "structure",
+      "name": "reference: references/human-interaction/04-integrity.md",
+      "passed": true
+    },
+    {
+      "group": "structure",
+      "name": "every reference is routed",
+      "passed": true
+    },
+    {
+      "group": "structure",
+      "name": "no external URLs in instruction documents",
+      "passed": true
+    },
+    {
+      "group": "structure",
+      "name": "unique scenario IDs",
+      "passed": true
+    },
+    {
+      "group": "fixtures",
+      "name": "greeting: candidate matches lexical assertions",
+      "passed": true
+    },
+    {
+      "group": "fixtures",
+      "name": "greeting: deliberately weak baseline rejected",
+      "passed": true
+    },
+    {
+      "group": "mutation",
+      "name": "greeting: injected forbidden phrase detected",
+      "passed": true
+    },
+    {
+      "group": "fixtures",
+      "name": "short-answer: candidate matches lexical assertions",
+      "passed": true
+    },
+    {
+      "group": "fixtures",
+      "name": "short-answer: deliberately weak baseline rejected",
+      "passed": true
+    },
+    {
+      "group": "mutation",
+      "name": "short-answer: injected forbidden phrase detected",
+      "passed": true
+    },
+    {
+      "group": "fixtures",
+      "name": "context: candidate matches lexical assertions",
+      "passed": true
+    },
+    {
+      "group": "fixtures",
+      "name": "context: deliberately weak baseline rejected",
+      "passed": true
+    },
+    {
+      "group": "mutation",
+      "name": "context: injected forbidden phrase detected",
+      "passed": true
+    },
+    {
+      "group": "fixtures",
+      "name": "ambiguity: candidate matches lexical assertions",
+      "passed": true
+    },
+    {
+      "group": "fixtures",
+      "name": "ambiguity: deliberately weak baseline rejected",
+      "passed": true
+    },
+    {
+      "group": "mutation",
+      "name": "ambiguity: injected forbidden phrase detected",
+      "passed": true
+    },
+    {
+      "group": "fixtures",
+      "name": "correction: candidate matches lexical assertions",
+      "passed": true
+    },
+    {
+      "group": "fixtures",
+      "name": "correction: deliberately weak baseline rejected",
+      "passed": true
+    },
+    {
+      "group": "mutation",
+      "name": "correction: injected forbidden phrase detected",
+      "passed": true
+    },
+    {
+      "group": "fixtures",
+      "name": "disagreement: candidate matches lexical assertions",
+      "passed": true
+    },
+    {
+      "group": "fixtures",
+      "name": "disagreement: deliberately weak baseline rejected",
+      "passed": true
+    },
+    {
+      "group": "mutation",
+      "name": "disagreement: injected forbidden phrase detected",
+      "passed": true
+    },
+    {
+      "group": "fixtures",
+      "name": "uncertainty: candidate matches lexical assertions",
+      "passed": true
+    },
+    {
+      "group": "fixtures",
+      "name": "uncertainty: deliberately weak baseline rejected",
+      "passed": true
+    },
+    {
+      "group": "mutation",
+      "name": "uncertainty: injected forbidden phrase detected",
+      "passed": true
+    },
+    {
+      "group": "fixtures",
+      "name": "empathy: candidate matches lexical assertions",
+      "passed": true
+    },
+    {
+      "group": "fixtures",
+      "name": "empathy: deliberately weak baseline rejected",
+      "passed": true
+    },
+    {
+      "group": "mutation",
+      "name": "empathy: injected forbidden phrase detected",
+      "passed": true
+    },
+    {
+      "group": "fixtures",
+      "name": "humor: candidate matches lexical assertions",
+      "passed": true
+    },
+    {
+      "group": "fixtures",
+      "name": "humor: deliberately weak baseline rejected",
+      "passed": true
+    },
+    {
+      "group": "mutation",
+      "name": "humor: injected forbidden phrase detected",
+      "passed": true
+    },
+    {
+      "group": "fixtures",
+      "name": "identity: candidate matches lexical assertions",
+      "passed": true
+    },
+    {
+      "group": "fixtures",
+      "name": "identity: deliberately weak baseline rejected",
+      "passed": true
+    },
+    {
+      "group": "mutation",
+      "name": "identity: injected forbidden phrase detected",
+      "passed": true
+    },
+    {
+      "group": "fixtures",
+      "name": "editing: candidate matches lexical assertions",
+      "passed": true
+    },
+    {
+      "group": "fixtures",
+      "name": "editing: deliberately weak baseline rejected",
+      "passed": true
+    },
+    {
+      "group": "mutation",
+      "name": "editing: injected forbidden phrase detected",
+      "passed": true
+    },
+    {
+      "group": "fixtures",
+      "name": "technical: candidate matches lexical assertions",
+      "passed": true
+    },
+    {
+      "group": "fixtures",
+      "name": "technical: deliberately weak baseline rejected",
+      "passed": true
+    },
+    {
+      "group": "mutation",
+      "name": "technical: injected forbidden phrase detected",
+      "passed": true
+    },
+    {
+      "group": "fixtures",
+      "name": "indonesian-casual: candidate matches lexical assertions",
+      "passed": true
+    },
+    {
+      "group": "fixtures",
+      "name": "indonesian-casual: deliberately weak baseline rejected",
+      "passed": true
+    },
+    {
+      "group": "mutation",
+      "name": "indonesian-casual: injected forbidden phrase detected",
+      "passed": true
+    },
+    {
+      "group": "fixtures",
+      "name": "indonesian-formal: candidate matches lexical assertions",
+      "passed": true
+    },
+    {
+      "group": "fixtures",
+      "name": "indonesian-formal: deliberately weak baseline rejected",
+      "passed": true
+    },
+    {
+      "group": "mutation",
+      "name": "indonesian-formal: injected forbidden phrase detected",
+      "passed": true
+    },
+    {
+      "group": "fixtures",
+      "name": "attribution: candidate matches lexical assertions",
+      "passed": true
+    },
+    {
+      "group": "fixtures",
+      "name": "attribution: deliberately weak baseline rejected",
+      "passed": true
+    },
+    {
+      "group": "mutation",
+      "name": "attribution: injected forbidden phrase detected",
+      "passed": true
+    },
+    {
+      "group": "fixtures",
+      "name": "formatting: candidate matches lexical assertions",
+      "passed": true
+    },
+    {
+      "group": "fixtures",
+      "name": "formatting: deliberately weak baseline rejected",
+      "passed": true
+    },
+    {
+      "group": "mutation",
+      "name": "formatting: injected forbidden phrase detected",
+      "passed": true
+    },
+    {
+      "group": "fixtures",
+      "name": "privacy: candidate matches lexical assertions",
+      "passed": true
+    },
+    {
+      "group": "fixtures",
+      "name": "privacy: deliberately weak baseline rejected",
+      "passed": true
+    },
+    {
+      "group": "mutation",
+      "name": "privacy: injected forbidden phrase detected",
+      "passed": true
+    },
+    {
+      "group": "fixtures",
+      "name": "disclosure: candidate matches lexical assertions",
+      "passed": true
+    },
+    {
+      "group": "fixtures",
+      "name": "disclosure: deliberately weak baseline rejected",
+      "passed": true
+    },
+    {
+      "group": "mutation",
+      "name": "disclosure: injected forbidden phrase detected",
+      "passed": true
+    },
+    {
+      "group": "fixtures",
+      "name": "fiction: candidate matches lexical assertions",
+      "passed": true
+    },
+    {
+      "group": "fixtures",
+      "name": "fiction: deliberately weak baseline rejected",
+      "passed": true
+    },
+    {
+      "group": "mutation",
+      "name": "fiction: injected forbidden phrase detected",
+      "passed": true
+    },
+    {
+      "group": "fixtures",
+      "name": "precision: candidate matches lexical assertions",
+      "passed": true
+    },
+    {
+      "group": "fixtures",
+      "name": "precision: deliberately weak baseline rejected",
+      "passed": true
+    },
+    {
+      "group": "mutation",
+      "name": "precision: injected forbidden phrase detected",
+      "passed": true
+    }
+  ]
+}
