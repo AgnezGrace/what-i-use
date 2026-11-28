@@ -12,6 +12,7 @@ A small collection of skills I use, in three separate catalogs: `skills/` for th
 | [the-emperor-of-ai](skills/the-emperor-of-ai/skill.md) | Govern familiar AI-generated UI patterns through deliberate hierarchy, coherent composition, restrained effects, and verified usability. |
 | [you-are-a-king](skills/you-are-a-king/skill.md) | Apply disciplined, evidence-led assistant conduct when asked to adopt the You Are a King persona, change its register, resist sycophancy or emotional pressure, or review conversational judgment. Supports Noble, King, and Emperor styles. |
 | [fuck-it-use-math](skills/fuck-it-use-math/SKILL.md) | Generate original, dependency-free icons and simple geometric assets with mathematics, native SVG and CSS. Includes the generator, icon registry, catalog, and tests. |
+| [fuck-the-navigation-bar](skills/fuck-the-navigation-bar/SKILL.md) | Replace permanent navigation bars with on-demand radial menus (Ghost Orbit): collision-free geometry, hold gestures, and an accessible fallback list. |
 
 ## Optional
 
@@ -71,6 +72,7 @@ Download one file, no clone needed:
 - The Emperor of AI: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/skills/the-emperor-of-ai/skill.md
 - You Are a King: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/skills/you-are-a-king/skill.md
 - Fuck It, Use Math: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/skills/fuck-it-use-math/SKILL.md
+- Fuck the Navigation Bar: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/skills/fuck-the-navigation-bar/SKILL.md
 
 Optional skills:
 
