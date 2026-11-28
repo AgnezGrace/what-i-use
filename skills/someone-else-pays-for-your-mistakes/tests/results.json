@@ -1,0 +1,434 @@
+{
+  "total": 66,
+  "passed": 66,
+  "checks": [
+    {
+      "name": "sandbox all gates",
+      "pass": true,
+      "actual": "SANDBOX READY",
+      "expected": "SANDBOX READY"
+    },
+    {
+      "name": "sandbox technical FAILED",
+      "pass": true,
+      "actual": "HOLD",
+      "expected": "HOLD"
+    },
+    {
+      "name": "sandbox technical UNVERIFIED",
+      "pass": true,
+      "actual": "HOLD",
+      "expected": "HOLD"
+    },
+    {
+      "name": "sandbox technical BLOCKED",
+      "pass": true,
+      "actual": "HOLD",
+      "expected": "HOLD"
+    },
+    {
+      "name": "sandbox operational FAILED",
+      "pass": true,
+      "actual": "HOLD",
+      "expected": "HOLD"
+    },
+    {
+      "name": "sandbox operational UNVERIFIED",
+      "pass": true,
+      "actual": "HOLD",
+      "expected": "HOLD"
+    },
+    {
+      "name": "sandbox operational BLOCKED",
+      "pass": true,
+      "actual": "HOLD",
+      "expected": "HOLD"
+    },
+    {
+      "name": "sandbox regulatory FAILED",
+      "pass": true,
+      "actual": "HOLD",
+      "expected": "HOLD"
+    },
+    {
+      "name": "sandbox regulatory UNVERIFIED",
+      "pass": true,
+      "actual": "HOLD",
+      "expected": "HOLD"
+    },
+    {
+      "name": "sandbox regulatory BLOCKED",
+      "pass": true,
+      "actual": "HOLD",
+      "expected": "HOLD"
+    },
+    {
+      "name": "sandbox third_party FAILED",
+      "pass": true,
+      "actual": "HOLD",
+      "expected": "HOLD"
+    },
+    {
+      "name": "sandbox third_party UNVERIFIED",
+      "pass": true,
+      "actual": "HOLD",
+      "expected": "HOLD"
+    },
+    {
+      "name": "sandbox third_party BLOCKED",
+      "pass": true,
+      "actual": "HOLD",
+      "expected": "HOLD"
+    },
+    {
+      "name": "pilot all gates",
+      "pass": true,
+      "actual": "READY FOR AUTHORIZATION",
+      "expected": "READY FOR AUTHORIZATION"
+    },
+    {
+      "name": "pilot technical FAILED",
+      "pass": true,
+      "actual": "HOLD",
+      "expected": "HOLD"
+    },
+    {
+      "name": "pilot technical UNVERIFIED",
+      "pass": true,
+      "actual": "HOLD",
+      "expected": "HOLD"
+    },
+    {
+      "name": "pilot technical BLOCKED",
+      "pass": true,
+      "actual": "HOLD",
+      "expected": "HOLD"
+    },
+    {
+      "name": "pilot operational FAILED",
+      "pass": true,
+      "actual": "HOLD",
+      "expected": "HOLD"
+    },
+    {
+      "name": "pilot operational UNVERIFIED",
+      "pass": true,
+      "actual": "HOLD",
+      "expected": "HOLD"
+    },
+    {
+      "name": "pilot operational BLOCKED",
+      "pass": true,
+      "actual": "HOLD",
+      "expected": "HOLD"
+    },
+    {
+      "name": "pilot regulatory FAILED",
+      "pass": true,
+      "actual": "HOLD",
+      "expected": "HOLD"
+    },
+    {
+      "name": "pilot regulatory UNVERIFIED",
+      "pass": true,
+      "actual": "HOLD",
+      "expected": "HOLD"
+    },
+    {
+      "name": "pilot regulatory BLOCKED",
+      "pass": true,
+      "actual": "HOLD",
+      "expected": "HOLD"
+    },
+    {
+      "name": "pilot third_party FAILED",
+      "pass": true,
+      "actual": "HOLD",
+      "expected": "HOLD"
+    },
+    {
+      "name": "pilot third_party UNVERIFIED",
+      "pass": true,
+      "actual": "HOLD",
+      "expected": "HOLD"
+    },
+    {
+      "name": "pilot third_party BLOCKED",
+      "pass": true,
+      "actual": "HOLD",
+      "expected": "HOLD"
+    },
+    {
+      "name": "public all gates",
+      "pass": true,
+      "actual": "READY FOR AUTHORIZATION",
+      "expected": "READY FOR AUTHORIZATION"
+    },
+    {
+      "name": "public technical FAILED",
+      "pass": true,
+      "actual": "HOLD",
+      "expected": "HOLD"
+    },
+    {
+      "name": "public technical UNVERIFIED",
+      "pass": true,
+      "actual": "HOLD",
+      "expected": "HOLD"
+    },
+    {
+      "name": "public technical BLOCKED",
+      "pass": true,
+      "actual": "HOLD",
+      "expected": "HOLD"
+    },
+    {
+      "name": "public operational FAILED",
+      "pass": true,
+      "actual": "HOLD",
+      "expected": "HOLD"
+    },
+    {
+      "name": "public operational UNVERIFIED",
+      "pass": true,
+      "actual": "HOLD",
+      "expected": "HOLD"
+    },
+    {
+      "name": "public operational BLOCKED",
+      "pass": true,
+      "actual": "HOLD",
+      "expected": "HOLD"
+    },
+    {
+      "name": "public regulatory FAILED",
+      "pass": true,
+      "actual": "HOLD",
+      "expected": "HOLD"
+    },
+    {
+      "name": "public regulatory UNVERIFIED",
+      "pass": true,
+      "actual": "HOLD",
+      "expected": "HOLD"
+    },
+    {
+      "name": "public regulatory BLOCKED",
+      "pass": true,
+      "actual": "HOLD",
+      "expected": "HOLD"
+    },
+    {
+      "name": "public third_party FAILED",
+      "pass": true,
+      "actual": "HOLD",
+      "expected": "HOLD"
+    },
+    {
+      "name": "public third_party UNVERIFIED",
+      "pass": true,
+      "actual": "HOLD",
+      "expected": "HOLD"
+    },
+    {
+      "name": "public third_party BLOCKED",
+      "pass": true,
+      "actual": "HOLD",
+      "expected": "HOLD"
+    },
+    {
+      "name": "public authorized",
+      "pass": true,
+      "actual": "AUTHORIZED STAGE",
+      "expected": "AUTHORIZED STAGE"
+    },
+    {
+      "name": "pilot authorized",
+      "pass": true,
+      "actual": "AUTHORIZED STAGE",
+      "expected": "AUTHORIZED STAGE"
+    },
+    {
+      "name": "owner consent cannot waive regulatory gate",
+      "pass": true,
+      "actual": "HOLD",
+      "expected": "HOLD"
+    },
+    {
+      "name": "sandbox evidence is not live evidence",
+      "pass": true,
+      "actual": "HOLD",
+      "expected": "HOLD"
+    },
+    {
+      "name": "pilot evidence is not public evidence",
+      "pass": true,
+      "actual": "HOLD",
+      "expected": "HOLD"
+    },
+    {
+      "name": "missing gate",
+      "pass": true,
+      "actual": "HOLD",
+      "expected": "HOLD"
+    },
+    {
+      "name": "missing evidence",
+      "pass": true,
+      "actual": "HOLD",
+      "expected": "HOLD"
+    },
+    {
+      "name": "unjustified N/A",
+      "pass": true,
+      "actual": "HOLD",
+      "expected": "HOLD"
+    },
+    {
+      "name": "evidenced N/A for illustrative nonregulated function",
+      "pass": true,
+      "actual": "READY FOR AUTHORIZATION",
+      "expected": "READY FOR AUTHORIZATION"
+    },
+    {
+      "name": "invalid stage",
+      "pass": true,
+      "actual": "HOLD",
+      "expected": "HOLD"
+    },
+    {
+      "name": "transfer local transaction",
+      "pass": true,
+      "actual": "SETTLED_LOCAL",
+      "expected": "SETTLED_LOCAL"
+    },
+    {
+      "name": "balances",
+      "pass": true,
+      "actual": [
+        750,
+        250
+      ],
+      "expected": [
+        750,
+        250
+      ]
+    },
+    {
+      "name": "repeat request",
+      "pass": true,
+      "actual": "REPLAY",
+      "expected": "REPLAY"
+    },
+    {
+      "name": "repeat preserves balance",
+      "pass": true,
+      "actual": [
+        750,
+        250
+      ],
+      "expected": [
+        750,
+        250
+      ]
+    },
+    {
+      "name": "conflicting replay",
+      "pass": true,
+      "actual": "CONFLICT",
+      "expected": "CONFLICT"
+    },
+    {
+      "name": "unauthorized transfer",
+      "pass": true,
+      "actual": "DENIED",
+      "expected": "DENIED"
+    },
+    {
+      "name": "negative amount",
+      "pass": true,
+      "actual": "DENIED",
+      "expected": "DENIED"
+    },
+    {
+      "name": "noninteger amount",
+      "pass": true,
+      "actual": "DENIED",
+      "expected": "DENIED"
+    },
+    {
+      "name": "overspend",
+      "pass": true,
+      "actual": "INSUFFICIENT",
+      "expected": "INSUFFICIENT"
+    },
+    {
+      "name": "fault injected",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "rollback preserves balances",
+      "pass": true,
+      "actual": [
+        750,
+        250
+      ],
+      "expected": [
+        750,
+        250
+      ]
+    },
+    {
+      "name": "rollback preserves transfer record",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "retry after rollback",
+      "pass": true,
+      "actual": "SETTLED_LOCAL",
+      "expected": "SETTLED_LOCAL"
+    },
+    {
+      "name": "double entry invariant",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "reconcile exact",
+      "pass": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "reconcile mismatch",
+      "pass": true,
+      "actual": [
+        "external",
+        "t1",
+        "t2"
+      ],
+      "expected": [
+        "external",
+        "t1",
+        "t2"
+      ]
+    },
+    {
+      "name": "reopen balances",
+      "pass": true,
+      "actual": [
+        700,
+        300
+      ],
+      "expected": [
+        700,
+        300
+      ]
+    }
+  ]
+}

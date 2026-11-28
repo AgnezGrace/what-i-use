@@ -14,6 +14,7 @@ A small collection of skills I use, in three separate catalogs: `skills/` for th
 | [fuck-it-use-math](skills/fuck-it-use-math/SKILL.md) | Generate original, dependency-free icons and simple geometric assets with mathematics, native SVG and CSS. Includes the generator, icon registry, catalog, and tests. |
 | [fuck-the-navigation-bar](skills/fuck-the-navigation-bar/SKILL.md) | Replace permanent navigation bars with on-demand radial menus (Ghost Orbit): collision-free geometry, hold gestures, and an accessible fallback list. |
 | [the-user-is-not-a-stack-trace](skills/the-user-is-not-a-stack-trace/SKILL.md) | Resolve ambiguous bug and revision scope with evidence: treat the user as a witness, classify the cause, read wide, write narrow, and verify what was left alone. |
+| [someone-else-pays-for-your-mistakes](skills/someone-else-pays-for-your-mistakes/SKILL.md) | Hold ambitious projects back until readiness is established, since someone else pays for the mistakes. |
 
 ## Optional
 
@@ -75,6 +76,7 @@ Download one file, no clone needed:
 - Fuck It, Use Math: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/skills/fuck-it-use-math/SKILL.md
 - Fuck the Navigation Bar: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/skills/fuck-the-navigation-bar/SKILL.md
 - The User Is Not a Stack Trace: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/skills/the-user-is-not-a-stack-trace/SKILL.md
+- Someone Else Pays for Your Mistakes: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/skills/someone-else-pays-for-your-mistakes/SKILL.md
 
 Optional skills:
 
