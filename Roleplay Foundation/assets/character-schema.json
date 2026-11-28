@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Portable fictional character profile (not a character card)",
+  "type": "object",
+  "required": ["schema_version", "identity", "tendencies", "relationships", "voice", "boundaries", "scene", "examples", "assumptions"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {"const": 1},
+    "identity": {"type": "object", "required": ["name", "canon", "goals", "knowledge_limits"], "additionalProperties": false, "properties": {"name": {"type": "string", "minLength": 1}, "canon": {"$ref": "#/$defs/strings"}, "goals": {"$ref": "#/$defs/strings"}, "knowledge_limits": {"$ref": "#/$defs/strings"}}},
+    "tendencies": {"type": "array", "items": {"type": "object", "required": ["trait", "motive", "triggers", "channels", "exceptions", "anti_patterns"], "additionalProperties": false, "properties": {"trait": {"type": "string", "minLength": 1}, "motive": {"type": "string"}, "triggers": {"$ref": "#/$defs/strings"}, "channels": {"$ref": "#/$defs/strings"}, "exceptions": {"$ref": "#/$defs/strings"}, "anti_patterns": {"$ref": "#/$defs/strings"}}}},
+    "relationships": {"$ref": "#/$defs/strings"},
+    "voice": {"type": "string"},
+    "boundaries": {"$ref": "#/$defs/strings"},
+    "scene": {"type": "object", "required": ["current", "established_events"], "additionalProperties": false, "properties": {"current": {"type": "string"}, "established_events": {"$ref": "#/$defs/strings"}}},
+    "examples": {"$ref": "#/$defs/strings"},
+    "assumptions": {"$ref": "#/$defs/strings"}
+  },
+  "$defs": {"strings": {"type": "array", "items": {"type": "string"}}}
+}

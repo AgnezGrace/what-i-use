@@ -1,6 +1,6 @@
 # What I Use
 
-A small collection of skills I use, in three separate catalogs: `skills/` for the main set, `optional/` for additional skills, and `DESIGN/` for design systems. Copy what you need.
+A small collection of skills I use, in four separate catalogs: `skills/` for the main set, `optional/` for additional skills, `DESIGN/` for design systems, and `Roleplay Foundation/` for a roleplay character foundation. Copy what you need.
 
 ## Skills
 
@@ -33,6 +33,12 @@ A small collection of skills I use, in three separate catalogs: `skills/` for th
 | Design | What it is |
 | --- | --- |
 | [Blueberry](DESIGN/Blueberry/DESIGN.md) | Premium web design system: quiet precision, four product modes, Berry pigment tokens, 44px targets, and a clean press and focus edge contract. |
+
+## Roleplay Foundation
+
+| Skill | What it does |
+| --- | --- |
+| [roleplay](Roleplay%20Foundation/SKILL.md) | Design fictional AI roleplay characters through observable behavior, relationships, motives, limitations and continuity rather than lists of adjectives. Foundation v0.1.0; the trait catalog is still empty. |
 
 ## Install
 
@@ -91,6 +97,10 @@ Optional skills:
 Design:
 
 - Blueberry: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/DESIGN/Blueberry/DESIGN.md
+
+Roleplay Foundation:
+
+- Roleplay: https://raw.githubusercontent.com/AgnezGrace/what-i-use/main/Roleplay%20Foundation/SKILL.md
 
 Save it as `skill.md` (or `SKILL.md`, depending on your agent) inside a folder named after the skill.
 
