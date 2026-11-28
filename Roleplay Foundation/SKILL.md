@@ -36,4 +36,4 @@ Read [ROLEPLAY_ROUTER.md](ROLEPLAY_ROUTER.md) first. Load only the core referenc
 
 ## Completion criteria
 
-The result has observable behavior, contextual limits, coherent trait interaction, clearly separated canon and examples, and an appropriate output format. If the user requested a platform mapping, list the actual destinations and any unverified details. If the user requested a catalog module, follow [core/module-contract.md](core/module-contract.md) and update the catalog index only for material that actually exists.
+The result has observable behavior, contextual limits, coherent trait interaction, clearly separated canon and examples, and an appropriate output format. If the user requested a platform mapping, list the actual destinations and any unverified details. If the user requested a catalog module, follow [core/module-contract.md](core/module-contract.md) and [core/catalog-maintenance.md](core/catalog-maintenance.md). Synchronize indexes and managed README sections from reviewed metadata; validate before delivery.

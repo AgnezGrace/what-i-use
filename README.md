@@ -38,7 +38,7 @@ A small collection of skills I use, in four separate catalogs: `skills/` for the
 
 | Skill | What it does |
 | --- | --- |
-| [roleplay](Roleplay%20Foundation/SKILL.md) | Design fictional AI roleplay characters through observable behavior, relationships, motives, limitations and continuity rather than lists of adjectives. Foundation v0.1.0; the trait catalog is still empty. |
+| [roleplay](Roleplay%20Foundation/SKILL.md) | Design fictional AI roleplay characters through observable behavior, relationships, motives, limitations and continuity rather than lists of adjectives. Foundation v0.2.0; the trait catalog is still empty. |
 
 ## Install
 

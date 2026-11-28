@@ -24,4 +24,4 @@ How the category interacts with contrasting traits, scene goals, and established
 Scenarios, expected properties (not exact dialogue), failure criteria, execution status and evidence. Label authored illustrations separately from actual model outputs.
 
 ## Integration
-Create SKILL.md with valid metadata and update catalog/index.json after validation. Do not register this template.
+Create SKILL.md with valid metadata and create local metadata and synchronize the catalog after review. Do not register this template.

@@ -134,7 +134,7 @@ def check_profile(value, schema, root_schema=None, where="profile"):
 
 
 def validate_root(root):
-    for name in ["README.md", "ROLEPLAY_ROUTER.md", "core/identity.md", "core/manifestation.md", "core/relationships.md", "core/composition.md", "core/continuity.md", "core/boundaries.md", "core/dialogue.md", "core/module-contract.md", "core/evaluation.md", "adapters/README.md", "adapters/universal-prompt.md", "assets/module-template.md", "assets/adapter-template.md", "assets/profile-template.md", "assets/character-schema.json"]:
+    for name in ["README.md", "ROLEPLAY_ROUTER.md", "core/identity.md", "core/manifestation.md", "core/relationships.md", "core/composition.md", "core/continuity.md", "core/boundaries.md", "core/dialogue.md", "core/module-contract.md", "core/catalog-maintenance.md", "scripts/sync_catalog.py", "core/evaluation.md", "adapters/README.md", "adapters/universal-prompt.md", "assets/module-template.md", "assets/adapter-template.md", "assets/profile-template.md", "assets/character-schema.json"]:
         safe_file(root, name)
     check_entry(safe_file(root, "SKILL.md"), "roleplay")
     validate_catalog(root, read_json(root / "catalog/index.json"))

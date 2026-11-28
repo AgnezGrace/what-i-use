@@ -10,7 +10,7 @@ Entry point: `SKILL.md`. This is a routing contract, not a second personality pr
 | Refine | manifestation; only other affected references | Minimal patch or revised definition |
 | Compose | composition, manifestation, relevant relationship/state references | Integrated profile |
 | Transfer | platform adapter guide; source profile | Copy-ready fields and loss report |
-| Author module | module-contract, manifestation, evaluation | Module and index entry |
+| Author module | module-contract, manifestation, evaluation | Module metadata and synchronized index |
 | Evaluate | evaluation; only relevant character references | Evidence-based findings |
 
 Core references are under `core/` with the exact filenames in this table: `identity.md`, `manifestation.md`, `relationships.md`, `composition.md`, `continuity.md`, `boundaries.md`, `dialogue.md`, `module-contract.md`, `evaluation.md`. Load boundaries when intimacy, power, coercion, user agency, or real-user dependence is relevant; its baseline invariants are also in SKILL.md. Load dialogue for voice or repetition problems; continuity for memory, scene progression or contradictions.
@@ -20,6 +20,8 @@ Core references are under `core/` with the exact filenames in this table: `ident
 Read `catalog/index.json` only when a task requires catalog traits. Match requested concepts to module ID or aliases; aliases may be multilingual. The index lists relative paths from the roleplay root. Load a matching category's SKILL.md and then only the requested manifestation references. If a trait is ambiguous, use context or ask one clarifying question. If no match exists, use generic core principles and mark catalog coverage absent. Do not guess paths or create an entry unless asked to author a module.
 
 A future attention request might mean caring, attentiveness, or seeking attention. These are not automatically equivalent. A future module may specify its own disambiguation logic. Do not assume an emotion, motive, temperament and relationship are the same kind of attribute.
+
+For module authoring, follow [catalog maintenance](core/catalog-maintenance.md). Run the synchronizer after reviewed metadata changes; do not manually edit derived indexes. At runtime read only the selected entries.
 
 ## Composition order
 

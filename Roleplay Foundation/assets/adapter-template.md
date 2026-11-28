@@ -13,3 +13,5 @@
 - Actual platform/model test status:
 
 Never turn an inferred mapping into a compatibility claim. Register only reviewed mappings with existing evidence; reverify changed interfaces.
+
+Use an `<id>.adapter.json` sidecar and run the catalog synchronizer after review.
